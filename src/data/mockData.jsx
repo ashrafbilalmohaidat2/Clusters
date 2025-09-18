@@ -1,7 +1,7 @@
 import React from "react";
 import devopscloud from "../assets/devopscloud.png"
 import webdev from "../assets/web.png"
-import uiux from "../assets/uiux.png"
+import uiux from "../assets/UIUX.png"
 import ecommerce from "../assets/e-commerce.png"
 // data/mockData.js
 export const colors = {
