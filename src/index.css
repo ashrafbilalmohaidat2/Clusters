@@ -5,14 +5,14 @@
 
 
 body {
-  @apply font-sans text-secondary bg-light;
+  @apply font-sans text-gray-700 bg-light;
   font-family: 'Cairo', 'Tajawal', 'Noto Sans Arabic', 'Inter', 'Roboto', Arial, sans-serif;
   color: #3C3C3C;
   background-color: #F8FAFC;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-sans text-secondary;
+  @apply font-sans text-gray-700;
   font-family: inherit;
 }
 
