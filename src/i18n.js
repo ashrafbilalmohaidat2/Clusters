@@ -1,4 +1,7 @@
 // src/i18n.js
+
+// Only non-sensitive data (language preference) is stored in localStorage for i18n.
+// This is safe because language preference is not private or security-relevant.
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend"; // لقراءة JSON من public

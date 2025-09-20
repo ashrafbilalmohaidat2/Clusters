@@ -60,8 +60,8 @@ const AboutPage = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-8 text-center">{t("coreValues")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreValues.map((value, idx) => (
-              <div key={idx} className="text-center p-6 bg-[#F8FAFC] rounded-xl">
+            {coreValues.map((value) => (
+              <div key={value.title} className="text-center p-6 bg-[#F8FAFC] rounded-xl">
                 <h3 className="text-xl font-bold text-[#3C3C3C] mb-3">{value.title}</h3>
                 <p className="text-[#9AA0A6]">{value.description}</p>
               </div>
@@ -74,8 +74,8 @@ const AboutPage = () => {
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-8 text-center">{t("partnerships")}</h2>
           <div className="bg-[#efeff0] rounded-xl p-8">
             <div className="grid md:grid-cols-3 gap-8 items-center">
-              {partnerships.map((p, idx) => (
-                <div key={idx} className="text-center">
+              {partnerships.map((p) => (
+                <div key={p.title} className="text-center">
                   <div className="text-4xl mb-4">{p.icon}</div>
                   <h3 className="text-lg font-bold text-[#3C3C3C] mb-2">{p.title}</h3>
                   <p className="text-[#9AA0A6]">{p.description}</p>

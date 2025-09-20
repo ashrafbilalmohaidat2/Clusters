@@ -5,10 +5,12 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // يخليها تنزل بسلاسة
-    });
+    if (typeof window !== "undefined" && window.scrollTo) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // يخليها تنزل بسلاسة
+      });
+    }
   }, [pathname]);
 
   return null;

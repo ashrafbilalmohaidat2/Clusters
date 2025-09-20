@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isAr = i18n.language === "ar";
   return (
     <section className="text-white relative h-screen w-full overflow-hidden">
       {/* Background video */}
@@ -26,14 +27,14 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center w-full">
 
           {/* Text Section */}
-          <div className="text-center md:text-left">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug">
+          <div className={`text-center ${isAr ? 'md:text-right' : 'md:text-left'}`}>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug font-sans text-secondary">
               {t("heroTitle")}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-blue-50">
+            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-blue-50 font-sans">
               {t("heroSubtitle")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? 'items-end' : 'items-start'}`}> 
               <Link
                 to="/contact"
                 className="bg-[#00AEEF] hover:bg-[#0099cc] text-white font-medium py-3 sm:py-4 px-8 rounded-lg transition-colors duration-200 text-center"

@@ -13,18 +13,16 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
     { name: t("about"), path: "/about" },
     { name: t("services"), path: "/services" },
     { name: t("portfolio"), path: "/portfolio" },
-    { name: t("blog"), path: "/blog" },
     { name: t("contact"), path: "/contact" }
   ];
 
   const isActive = (path) => location.pathname === path;
 
   // Handle RTL direction
+  // Set document direction for RTL/LTR, safe for browser only
   React.useEffect(() => {
-    if (i18n.language === "ar") {
-      document.documentElement.dir = "rtl";
-    } else {
-      document.documentElement.dir = "ltr";
+    if (typeof document !== "undefined") {
+      document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
     }
   }, [i18n.language]);
 
@@ -34,7 +32,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
   };
 
   return (
-    <nav className="bg-white shadow-md sticky py-4 top-0 z-50 border-b border-[#C5C9CC]">
+  <nav className="bg-white shadow-md sticky py-4 top-0 z-50 border-b border-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">

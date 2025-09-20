@@ -95,9 +95,9 @@ const ContactInfo = () => {
         <path d="M21.4893 35.5227V19.769L36.0311 30.6754L50.5729 19.769V35.5227L36.0311 46.429" fill="#EA4335"/>
         <path d="M9.37109 21.587V26.4343L21.4893 35.5229V19.7693L18.0962 17.2245C14.4971 14.5282 9.37109 17.0912 9.37109 21.587Z" fill="#C5221F"/>
         </svg>   , url: "#" }
-  ].map((social, index) => (
-            <a
-              key={index}
+  ].map((social) => (
+    <a
+      key={social.name}
               href={social.url}
               className="flex items-center justify-center w-12 h-12 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 text-[#3C3C3C] hover:text-[#00AEEF]"
               title={social.name}

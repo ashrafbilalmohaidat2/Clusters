@@ -57,9 +57,9 @@ const Footer = () => {
               {isAr ? t("footerDesc") : "Transforming businesses through innovative technology and creative design solutions."}
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <a
-                  key={index}
+                  key={social.name}
                   href={social.url}
                   title={social.name}
                 >

@@ -49,8 +49,8 @@ const CareersPage = () => {
           <div>
             <h2 className="text-2xl font-bold text-[#3C3C3C] mb-6">{t("careers.whyWork")}</h2>
             <div className="space-y-6">
-              {whyWorkWithUs.map((item, index) => (
-                <div key={index} className="border-l-4 border-[#00AEEF] pl-4">
+              {whyWorkWithUs.map((item) => (
+                <div key={item.title} className="border-l-4 border-[#00AEEF] pl-4">
                   <h3 className="font-semibold text-[#3C3C3C]">{item.title}</h3>
                   <p className="text-[#9AA0A6]">{item.desc}</p>
                 </div>
@@ -61,15 +61,15 @@ const CareersPage = () => {
           <div>
             <h2 className="text-2xl font-bold text-[#3C3C3C] mb-6">{t("careers.currentOpenings")}</h2>
             <div className="space-y-6">
-              {currentOpenings.map((job, index) => (
-                <div key={index} className="border rounded-lg p-6 hover:shadow-md transition-shadow duration-200">
+              {currentOpenings.map((job) => (
+                <div key={job.title} className="border rounded-lg p-6 hover:shadow-md transition-shadow duration-200">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-semibold text-[#3C3C3C]">{job.title}</h3>
                     <span className="bg-[#F0F9FF] text-[#00AEEF] text-sm px-3 py-1 rounded-full">{job.location}</span>
                   </div>
                   <ul className="space-y-2 mb-6">
-                    {job.requirements.map((req, i) => (
-                      <li key={i} className="flex items-center text-[#9AA0A6]">
+                    {job.requirements.map((req) => (
+                      <li key={req} className="flex items-center text-[#9AA0A6]">
                         <span className="w-2 h-2 bg-[#00AEEF] rounded-full mr-3"></span>
                         {req}
                       </li>
