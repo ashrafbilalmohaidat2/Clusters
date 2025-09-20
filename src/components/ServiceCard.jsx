@@ -13,23 +13,23 @@ const ServiceCard = ({ service, showDetails = false }) => {
         <div className="flex items-start mb-6">
           <div className="w-30 h-30 mr-6">{service.icon}</div>
           <div>
-            <h2 className="text-2xl font-bold text-secondary mb-2">{isAr ? service.title_ar : service.title}</h2>
+            <h2 className="text-2xl font-bold text-gray-700 mb-2">{isAr ? service.title_ar : service.title}</h2>
             <p className="text-muted">{isAr ? service.description_ar : service.description}</p>
           </div>
         </div>
         <div className="space-y-6">
           <div>
-            <h3 className="font-semibold text-secondary mb-3">{t("deliverables")}</h3>
+            <h3 className="font-semibold text-gray-700 mb-3">{t("deliverables")}</h3>
             <ul className={`list-disc list-inside space-y-2 ml-2 marker:text-primary ${isAr ? 'text-right' : 'text-left'}`}> 
               {(isAr ? service.deliverables_ar : service.deliverables).map((item) => (
-                <li key={item} className="pl-1 text-secondary">
+                <li key={item} className="pl-1 text-gray-700">
                   {item}
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-secondary mb-3">{t("technologies")}</h3>
+            <h3 className="font-semibold text-gray-700 mb-3">{t("technologies")}</h3>
             <div className="flex flex-wrap gap-2">
               {(isAr ? service.technologies_ar : service.technologies).map((tech) => (
                 <span key={tech} className="inline-block bg-[#7bbbe6] text-primary text-xs font-semibold px-4 py-1 rounded-full border border-[#7bbbe6] shadow-sm uppercase tracking-wide">
@@ -55,7 +55,7 @@ const ServiceCard = ({ service, showDetails = false }) => {
   return (
   <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="mb-6">{service.icon}</div>
-  <h3 className="text-xl font-bold text-secondary mb-3">{isAr ? service.title_ar : service.title}</h3>
+  <h3 className="text-xl font-bold text-gray-700 mb-3">{isAr ? service.title_ar : service.title}</h3>
   <p className="text-muted mb-4">{isAr ? service.description_ar : service.description}</p>
       <div className="flex justify-between items-center">
         <span className="font-semibold text-primary">{service.pricing}</span>

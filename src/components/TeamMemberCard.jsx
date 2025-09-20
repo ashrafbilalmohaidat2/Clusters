@@ -15,7 +15,7 @@ const TeamMemberCard = ({ member }) => {
           loading="lazy"
         />
       </div>
-  <h3 className="text-xl font-bold text-secondary mb-2">{isAr ? member.name_ar : member.name}</h3>
+  <h3 className="text-xl font-bold text-gray-700 mb-2">{isAr ? member.name_ar : member.name}</h3>
   <p className="text-primary font-medium mb-3">{isAr ? member.role_ar : member.role}</p>
   <p className="text-muted">{isAr ? member.bio_ar : member.bio}</p>
     </div>

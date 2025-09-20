@@ -28,14 +28,14 @@ const StrengthsSection = () => {
   <section className="py-16 bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-secondary mb-4">{t("strengthsTitle")}</h2>
+          <h2 className="text-3xl font-bold text-gray-700 mb-4">{t("strengthsTitle")}</h2>
           <p className="text-xl text-muted">{t("strengthsSubtitle")}</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {strengths.map((strength) => (
             <div key={strength.title} className="text-center p-8 bg-light rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
               <div className="text-4xl mb-4">{strength.icon}</div>
-              <h3 className="text-xl font-bold text-secondary mb-4">{strength.title}</h3>
+              <h3 className="text-xl font-bold text-gray-700 mb-4">{strength.title}</h3>
               <p className="text-muted">{strength.description}</p>
             </div>
           ))}

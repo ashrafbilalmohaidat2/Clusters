@@ -22,7 +22,7 @@ const ProjectCard = React.memo(({ project }) => {
         </div>
       </div>
       <div className="mt-4">
-        <h3 className="text-xl font-bold text-secondary">{isAr ? project.title_ar : project.title}</h3>
+  <h3 className="text-xl font-bold text-gray-700">{isAr ? project.title_ar : project.title}</h3>
         <p className="text-primary">{isAr ? project.category_ar : project.category}</p>
       </div>
     </div>
