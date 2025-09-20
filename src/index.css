@@ -5,7 +5,7 @@
 
 
 body {
-  @apply font-sans text-gray-700 bg-light;
+  @apply font-sans text-gray-700 bg-gray-50;
   font-family: 'Cairo', 'Tajawal', 'Noto Sans Arabic', 'Inter', 'Roboto', Arial, sans-serif;
   color: #3C3C3C;
   background-color: #F8FAFC;
