@@ -1,11 +1,14 @@
 // components/ContactInfo.js
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactInfo = () => {
+  const { t, i18n } = useTranslation();
+  const isAr = i18n.language === "ar";
   return (
     <div className="space-y-8">
       <div className="bg-[#F8FAFC] rounded-xl p-8">
-        <h3 className="text-2xl font-bold text-[#3C3C3C] mb-6">Contact Information</h3>
+  <h3 className="text-2xl font-bold text-[#3C3C3C] mb-6">{t("contact_info.title")}</h3>
         
         <div className="space-y-6">
           <div className="flex items-start">
@@ -19,7 +22,7 @@ const ContactInfo = () => {
                 </svg>  
             </div>
             <div>
-              <h4 className="font-semibold text-[#3C3C3C]">Email</h4>
+              <h4 className="font-semibold text-[#3C3C3C]">{t("contact_info.email")}</h4>
               <a className="text-[#9AA0A6] hover:text-[#00AEEF]" href="mailto:hello@clusters.com">hello@clusters.com</a>
             </div>
           </div>
@@ -27,7 +30,7 @@ const ContactInfo = () => {
           <div className="flex items-start">
             <div className="text-[#00AEEF] mr-4 mt-1">📱</div>
             <div>
-              <h4 className="font-semibold text-[#3C3C3C]">Phone</h4>
+              <h4 className="font-semibold text-[#3C3C3C]">{t("contact_info.phone")}</h4>
               <p className="text-[#9AA0A6]">+1 (555) 123-4567</p>
             </div>
           </div>
@@ -40,7 +43,7 @@ const ContactInfo = () => {
               </svg>
             </div>
             <div>
-              <h4 className="font-semibold text-[#3C3C3C]">WhatsApp</h4>
+              <h4 className="font-semibold text-[#3C3C3C]">{t("contact_info.whatsapp")}</h4>
               <p className="text-[#9AA0A6]">+1 (555) 123-4567</p>
             </div>
           </div>
@@ -48,11 +51,11 @@ const ContactInfo = () => {
           <div className="flex items-start">
             <div className="text-[#00AEEF] mr-4 mt-1">📍</div>
             <div>
-              <h4 className="font-semibold text-[#3C3C3C]">Address</h4>
+              <h4 className="font-semibold text-[#3C3C3C]">{t("contact_info.address")}</h4>
               <p className="text-[#9AA0A6]">
-                123 Tech Avenue<br />
-                San Francisco, CA 94107<br />
-                United States
+                {isAr ? t("contact_info.address_line1") : "123 Tech Avenue"}<br />
+                {isAr ? t("contact_info.address_line2") : "San Francisco, CA 94107"}<br />
+                {isAr ? t("contact_info.address_line3") : "United States"}
               </p>
             </div>
           </div>
@@ -61,7 +64,7 @@ const ContactInfo = () => {
       
       {/* Social Links */}
       <div className="bg-[#F8FAFC] rounded-xl p-8">
-        <h3 className="text-2xl font-bold text-[#3C3C3C] mb-6">Connect With Us</h3>
+  <h3 className="text-2xl font-bold text-[#3C3C3C] mb-6">{t("contact_info.connect")}</h3>
         <div className="flex space-x-4">
           {[
     { name: "Facebook", icon: <svg class="transition-all duration-300 group-hover:scale-110"

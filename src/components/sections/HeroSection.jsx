@@ -1,8 +1,10 @@
 // components/sections/HeroSection.js
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="text-white relative h-screen w-full overflow-hidden">
       {/* Background video */}
@@ -26,23 +28,23 @@ const HeroSection = () => {
           {/* Text Section */}
           <div className="text-center md:text-left">
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug">
-              Boost Your Online Presence Today
+              {t("heroTitle")}
             </h1>
             <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-blue-50">
-              Clusters combines technical expertise with creative design to build solutions that drive real business results.
+              {t("heroSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 to="/contact"
-                className="bg-[#13496c] hover:bg-[#2547a3] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-center"
+                className="bg-[#00AEEF] hover:bg-[#0099cc] text-white font-medium py-3 sm:py-4 px-8 rounded-lg transition-colors duration-200 text-center"
               >
-                Get a Free Consultation
+                {t("consultationBtn")}
               </Link>
               <Link
                 to="/services"
                 className="border-2 border-white hover:bg-white hover:text-[#00AEEF] font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-center"
               >
-                View Services
+                {t("servicesBtn")}
               </Link>
             </div>
           </div>
@@ -52,7 +54,7 @@ const HeroSection = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 max-w-full">
               <img
                 src="clusterslogo.png"
-                alt="Digital Transformation"
+                alt={t("heroTitle")}
                 className="rounded-lg w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain"
               />
             </div>

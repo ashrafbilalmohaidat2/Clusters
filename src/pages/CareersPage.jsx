@@ -1,52 +1,53 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const CareersPage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const whyWorkWithUs = [
-    { title: "Flexible Work Environment", desc: "Remote or hybrid options with flexible hours to support work-life balance." },
-    { title: "Professional Growth", desc: "Regular training, conferences, and mentorship programs to advance your career." },
-    { title: "Competitive Compensation", desc: "Above-market salaries, bonuses, and comprehensive benefits package." },
-    { title: "Innovative Projects", desc: "Work on cutting-edge technologies with clients across various industries." }
+    { title: t("careers.flexibleWork"), desc: t("careers.flexibleWorkDesc") },
+    { title: t("careers.professionalGrowth"), desc: t("careers.professionalGrowthDesc") },
+    { title: t("careers.competitiveComp"), desc: t("careers.competitiveCompDesc") },
+    { title: t("careers.innovativeProjects"), desc: t("careers.innovativeProjectsDesc") }
   ];
 
   const currentOpenings = [
     {
-      title: "Senior Frontend Developer",
-      requirements: ["5+ years React experience", "TypeScript proficiency", "State management expertise"],
-      location: "Remote"
+      title: t("careers.seniorFrontend"),
+      requirements: [t("careers.req1_1"), t("careers.req1_2"), t("careers.req1_3")],
+      location: t("careers.remote")
     },
     {
-      title: "UI/UX Designer",
-      requirements: ["Portfolio of design work", "Figma/Sketch expertise", "User research experience"],
-      location: "Hybrid (NYC)"
+      title: t("careers.uiuxDesigner"),
+      requirements: [t("careers.req2_1"), t("careers.req2_2"), t("careers.req2_3")],
+      location: t("careers.hybridNYC")
     },
     {
-      title: "DevOps Engineer",
-      requirements: ["AWS/GCP experience", "CI/CD pipeline expertise", "Containerization skills"],
-      location: "Remote"
+      title: t("careers.devopsEngineer"),
+      requirements: [t("careers.req3_1"), t("careers.req3_2"), t("careers.req3_3")],
+      location: t("careers.remote")
     }
   ];
 
   const handleApply = () => {
-    navigate("/contact"); // مثال: توجه لصفحة contact لتقديم الطلب
+    navigate("/contact");
   };
 
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">Join Our Team</h1>
+          <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">{t("careers.joinTeam")}</h1>
           <p className="text-xl text-[#9AA0A6] max-w-3xl mx-auto">
-            We're always looking for talented individuals who are passionate about technology and design. 
-            If you're ready to make an impact, we'd love to hear from you.
+            {t("careers.intro")}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="text-2xl font-bold text-[#3C3C3C] mb-6">Why Work With Us</h2>
+            <h2 className="text-2xl font-bold text-[#3C3C3C] mb-6">{t("careers.whyWork")}</h2>
             <div className="space-y-6">
               {whyWorkWithUs.map((item, index) => (
                 <div key={index} className="border-l-4 border-[#00AEEF] pl-4">
@@ -58,7 +59,7 @@ const CareersPage = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-[#3C3C3C] mb-6">Current Openings</h2>
+            <h2 className="text-2xl font-bold text-[#3C3C3C] mb-6">{t("careers.currentOpenings")}</h2>
             <div className="space-y-6">
               {currentOpenings.map((job, index) => (
                 <div key={index} className="border rounded-lg p-6 hover:shadow-md transition-shadow duration-200">
@@ -76,9 +77,9 @@ const CareersPage = () => {
                   </ul>
                   <button
                     onClick={handleApply}
-                    className="w-full bg-[#1E3A8A] text-white py-2 rounded-lg font-medium hover:bg-[#2547a3] transition-colors duration-200"
+                    className="w-full bg-[#00AEEF] hover:bg-[#0099cc] text-white py-3 px-8 rounded-lg font-medium transition-colors duration-200"
                   >
-                    Apply Now
+                    {t("careers.applyNow")}
                   </button>
                 </div>
               ))}
@@ -87,13 +88,13 @@ const CareersPage = () => {
         </div>
 
         <div className="bg-[#F0F9FF] rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-4">Don't see your perfect role?</h2>
-          <p className="text-[#9AA0A6] mb-6">We're always interested in meeting talented individuals. Send us your resume!</p>
+          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-4">{t("careers.noPerfectRole")}</h2>
+          <p className="text-[#9AA0A6] mb-6">{t("careers.sendResume")}</p>
           <button
             onClick={handleApply}
-            className="bg-[#00AEEF] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0099cc] transition-colors duration-200"
+            className="bg-[#00AEEF] hover:bg-[#0099cc] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
           >
-            Submit Your Resume
+            {t("careers.submitResume")}
           </button>
         </div>
       </div>

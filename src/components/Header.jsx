@@ -1,21 +1,36 @@
 // components/Header.js
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 const Header = ({ isMenuOpen, setIsMenuOpen }) => {
   const location = useLocation();
-  
+  const { t, i18n } = useTranslation();
+
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" }
+    { name: t("home"), path: "/" },
+    { name: t("about"), path: "/about" },
+    { name: t("services"), path: "/services" },
+    { name: t("portfolio"), path: "/portfolio" },
+    { name: t("blog"), path: "/blog" },
+    { name: t("contact"), path: "/contact" }
   ];
 
-  const isActive = (path) => {
-    return location.pathname === path;
+  const isActive = (path) => location.pathname === path;
+
+  // Handle RTL direction
+  React.useEffect(() => {
+    if (i18n.language === "ar") {
+      document.documentElement.dir = "rtl";
+    } else {
+      document.documentElement.dir = "ltr";
+    }
+  }, [i18n.language]);
+
+  // Language switcher
+  const handleLanguageChange = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -27,9 +42,8 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               <img src="logoClusters.png" alt="Clusters Logo" />
             </Link>
           </div>
-          
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <Link
@@ -45,8 +59,32 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 </Link>
               ))}
             </div>
+            {/* Language Switcher */}
+            <div className="ml-6 flex gap-2">
+              <button
+                onClick={() => handleLanguageChange("en")}
+                className={`px-3 py-1.5 rounded-full text-sm font-semibold shadow transition-all hover:cursor-pointer duration-200 focus:outline-none border-2
+                  ${i18n.language === "en"
+                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
+                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
+                `}
+                style={{ minWidth: 48 }}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => handleLanguageChange("ar")}
+                className={`px-3 py-1.5 rounded-full text-sm font-semibold hover:cursor-pointer shadow transition-all duration-200 focus:outline-none border-2
+                  ${i18n.language === "ar"
+                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
+                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
+                `}
+                style={{ minWidth: 48 }}
+              >
+                العربية
+              </button>
+            </div>
           </div>
-          
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -60,7 +98,6 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
           </div>
         </div>
       </div>
-      
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-[#C5C9CC]">
@@ -79,6 +116,31 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 {item.name}
               </Link>
             ))}
+            {/* Language Switcher Mobile */}
+            <div className="flex gap-2 mt-2">
+              <button
+                onClick={() => handleLanguageChange("en")}
+                className={`px-3 py-1.5 rounded-full text-sm font-semibold shadow transition-all duration-200 focus:outline-none border-2
+                  ${i18n.language === "en"
+                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
+                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
+                `}
+                style={{ minWidth: 48 }}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => handleLanguageChange("ar")}
+                className={`px-3 py-1.5 rounded-full text-sm font-semibold shadow transition-all duration-200 focus:outline-none border-2
+                  ${i18n.language === "ar"
+                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
+                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
+                `}
+                style={{ minWidth: 48 }}
+              >
+                العربية
+              </button>
+            </div>
           </div>
         </div>
       )}

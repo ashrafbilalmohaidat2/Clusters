@@ -1,14 +1,17 @@
 // components/Footer.js
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { services } from "../data/mockData";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
+  const isAr = i18n.language === "ar";
   const companyLinks = [
-    { name: "About Us", path: "/about" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" }
+    { name: isAr ? t("about") : "About Us", path: "/about" },
+    { name: isAr ? t("portfolio") : "Portfolio", path: "/portfolio" },
+    { name: isAr ? t("blog") : "Blog", path: "/blog" },
+    { name: isAr ? t("contact") : "Contact", path: "/contact" }
   ];
 
   const socialLinks = [
@@ -51,7 +54,7 @@ const Footer = () => {
               <img src="logoClusters.png" alt="Logo" className="w-20 h-20" />
             </Link>
             <p className="text-gray-300 mb-4 font-medium">
-              Transforming businesses through innovative technology and creative design solutions.
+              {isAr ? t("footerDesc") : "Transforming businesses through innovative technology and creative design solutions."}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -65,9 +68,8 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          
           <div>
-            <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">Services</h4>
+            <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">{t("services")}</h4>
             <ul className="space-y-2 font-medium">
               {services.slice(0, 4).map((service) => (
                 <li key={service.id}>
@@ -75,15 +77,14 @@ const Footer = () => {
                     to="/services"
                     className="text-gray-300 hover:text-[#00AEEF] transition-colors duration-200"
                   >
-                    {service.title}
+                    {isAr ? service.title_ar : service.title}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          
           <div>
-            <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">Company</h4>
+            <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">{t("company")}</h4>
             <ul className="space-y-2 font-medium">
               {companyLinks.map((item) => (
                 <li key={item.path}>
@@ -97,20 +98,18 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
           <div>
-            <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">Contact</h4>
+            <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">{t("contact")}</h4>
             <ul className="space-y-2 text-gray-300 font-medium">
               <li className="hover:text-[#00AEEF] cursor-pointer" ><a mailto="hello@clusters.com">hello@clusters.com</a></li>
               <li>+1 (555) 123-4567</li>
-              <li>123 Tech Avenue</li>
-              <li>San Francisco, CA 94107</li>
+              <li>{isAr ? "123 شارع التكنولوجيا" : "123 Tech Avenue"}</li>
+              <li>{isAr ? "سان فرانسيسكو، كاليفورنيا 94107" : "San Francisco, CA 94107"}</li>
             </ul>
           </div>
         </div>
-        
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Clusters. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Clusters. {isAr ? "جميع الحقوق محفوظة." : "All rights reserved."}</p>
         </div>
       </div>
     </footer>

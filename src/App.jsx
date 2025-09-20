@@ -9,7 +9,7 @@ import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
-import ScrollToTop from "./components/ScrollToTop"; // ✅ استدعاء الجديد
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
