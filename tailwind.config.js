@@ -18,12 +18,12 @@ module.exports = {
         ],
       },
       colors: {
-        primary: '#00AEEF',
-        secondary: '#3C3C3C',
-        accent: '#F0F9FF',
-        muted: '#9AA0A6',
-        dark: '#222F3E',
-        light: '#F8FAFC',
+        primary: "#00AEEF",
+        secondary: "#3C3C3C", // Custom secondary color for text-secondary
+        accent: "#F0F9FF",
+        muted: "#9AA0A6",
+        dark: "#222F3E",
+        light: "#F8FAFC",
       },
     },
   },
