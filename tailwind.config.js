@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -19,6 +19,7 @@ module.exports = {
       },
       colors: {
         primary: "#00AEEF",
+        secondary: "#3C3C3C", // Custom secondary color for text-secondary
         accent: "#F0F9FF",
         muted: "#9AA0A6",
         dark: "#222F3E",

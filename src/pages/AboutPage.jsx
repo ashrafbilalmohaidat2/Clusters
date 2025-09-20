@@ -39,7 +39,7 @@ const AboutPage = () => {
         {/* Vision Section */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] rounded-xl p-8 text-white">
-            <h2 className="text-3xl font-bold mb-6">{t("ourVision")}</h2>
+            <h2 className="text-3xl font-bold mb-6 !text-white">{t("ourVision")}</h2>
             <p className="text-xl leading-relaxed">
               {t("visionText")}
             </p>

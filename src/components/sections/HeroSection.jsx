@@ -28,10 +28,10 @@ const HeroSection = () => {
 
           {/* Text Section */}
           <div className={`text-center ${isAr ? 'md:text-right' : 'md:text-left'}`}>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug font-sans text-gray-700">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug font-sans !text-white ">
               {t("heroTitle")}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-blue-50 font-sans">
+            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-white font-sans">
               {t("heroSubtitle")}
             </p>
             <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? 'items-end' : 'items-start'}`}> 
