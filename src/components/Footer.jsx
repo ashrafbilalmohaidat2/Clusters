@@ -10,7 +10,6 @@ const Footer = () => {
   const companyLinks = [
     { name: isAr ? t("about") : "About Us", path: "/about" },
     { name: isAr ? t("portfolio") : "Portfolio", path: "/portfolio" },
-    { name: isAr ? t("blog") : "Blog", path: "/blog" },
     { name: isAr ? t("contact") : "Contact", path: "/contact" }
   ];
 
