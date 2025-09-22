@@ -47,7 +47,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-3 py-2 rounded-md text-md font-medium transition-colors duration-200 ${
+                  className={`px-3 py-2 rounded-md text-md font-bold transition-colors duration-200 ${
                     isActive(item.path)
                       ? "bg-[#F0F9FF] text-[#00AEEF]"
                       : "text-[#3C3C3C] hover:bg-[#F8FAFC] hover:text-[#00AEEF]"
@@ -61,7 +61,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
             <div className="ml-6 flex gap-2">
               <button
                 onClick={() => handleLanguageChange("en")}
-                className={`px-3 py-1.5 rounded-full text-sm font-semibold shadow transition-all hover:cursor-pointer duration-200 focus:outline-none border-2
+                className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all hover:cursor-pointer duration-200 focus:outline-none border-2
                   ${i18n.language === "en"
                     ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
                     : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
@@ -72,7 +72,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               </button>
               <button
                 onClick={() => handleLanguageChange("ar")}
-                className={`px-3 py-1.5 rounded-full text-sm font-semibold hover:cursor-pointer shadow transition-all duration-200 focus:outline-none border-2
+                className={`px-3 py-1.5 rounded-full text-sm font-bold hover:cursor-pointer shadow transition-all duration-200 focus:outline-none border-2
                   ${i18n.language === "ar"
                     ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
                     : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
@@ -105,7 +105,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200 ${
+                className={`block px-3 py-2 rounded-md text-base font-bold w-full text-left transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-[#F0F9FF] text-[#00AEEF]"
                     : "text-[#3C3C3C] hover:bg-[#F8FAFC] hover:text-[#00AEEF]"
@@ -118,7 +118,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
             <div className="flex gap-2 mt-2">
               <button
                 onClick={() => handleLanguageChange("en")}
-                className={`px-3 py-1.5 rounded-full text-sm font-semibold shadow transition-all duration-200 focus:outline-none border-2
+                className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all duration-200 focus:outline-none border-2
                   ${i18n.language === "en"
                     ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
                     : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
@@ -129,7 +129,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               </button>
               <button
                 onClick={() => handleLanguageChange("ar")}
-                className={`px-3 py-1.5 rounded-full text-sm font-semibold shadow transition-all duration-200 focus:outline-none border-2
+                className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all duration-200 focus:outline-none border-2
                   ${i18n.language === "ar"
                     ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
                     : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
