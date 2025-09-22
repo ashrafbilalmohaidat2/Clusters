@@ -6,7 +6,7 @@ const TeamMemberCard = ({ member }) => {
   const { i18n } = useTranslation();
   const isAr = i18n.language === "ar";
   return (
-    <div className="text-center">
+    <div className="text-center bg-[#F8FAFC] rounded-xl shadow p-4">
       <div className="relative mb-6">
         <img 
           src={member.image} 

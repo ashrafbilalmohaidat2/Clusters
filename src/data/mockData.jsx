@@ -2,7 +2,7 @@ import React from "react";
 import devopscloud from "../assets/devopscloud.png"
 import webdev from "../assets/web.png"
 import uiux from "../assets/UIUX.png"
-import ecommerce from "../assets/e-commerce.png"
+
 // data/mockData.js
 export const colors = {
   mainBlue: "#1b5e82",
@@ -54,60 +54,50 @@ export const services = [
       //pricing: "Starting at $8,000",
       icon: <img src={devopscloud} alt="DevOps Cloud" className="w-15 h-15 mx-auto"/>
     },
-    {
-      id: 4,
-      title: "E-commerce Solutions",
-      title_ar: "حلول التجارة الإلكترونية",
-      description: "Complete online store setups with secure payment processing and inventory management.",
-      description_ar: "إعداد متاجر إلكترونية كاملة مع معالجة الدفع الآمن وإدارة المخزون.",
-      deliverables: ["Shopping Cart", "Payment Gateway", "Product Management", "Order Tracking"],
-      deliverables_ar: ["سلة تسوق", "بوابة دفع", "إدارة المنتجات", "تتبع الطلبات"],
-      technologies: ["Shopify", "WooCommerce", "Magento", "Stripe"],
-      technologies_ar: ["شوبيفاي", "ووكومرس", "ماجنتو", "سترايب"],
-      //pricing: "Starting at $6,500",
-      icon: <img src={ecommerce} alt="E-commerce Solutions" className="w-15 h-15 mx-auto"/>
-    }
+
   ];
 
 export const portfolioProjects = [
     {
       id: 1,
-      title: "FinTech Dashboard",
-      title_ar: "لوحة تحكم التقنية المالية",
-      category: "Web Development",
-      category_ar: "تطوير الويب",
-      image: "https://placehold.co/600x400/00AEEF/FFFFFF?text=FinTech+Dashboard",
-      challenge: "Client needed a complex financial data visualization dashboard with real-time updates.",
-      solution: "Built a responsive dashboard with interactive charts and secure authentication.",
-      technologies: ["React", "D3.js", "Node.js", "MongoDB"],
-      results: "Increased user engagement by 45% and reduced data processing time by 60%.",
-      link: "#"
+      title: "Two-Tier Architecture Infrastructure",
+      title_ar: "بنية تحتية ذات طبقتين",
+      category: "Cloud & DevOps",
+      category_ar: "الحوسبة السحابية و DevOps",
+      image: "https://placehold.co/600x400/00AEEF/FFFFFF?text=CloudDevOps",
+      challenge: "The client needed a reliable and scalable cloud infrastructure to support their growing applications and ensure high availability.",
+      solution: "Designed and deployed a two-tier architecture on AWS using Terraform for Infrastructure as Code (IaC). Automated the provisioning of VPC, subnets, EC2 instances, and RDS with proper security groups and load balancing.",
+      technologies: ["AWS", "Terraform"],
+      results: "Reduced infrastructure setup time by 80%, improved system scalability and resilience, and ensured consistent and repeatable deployments.",
+      link: "https://github.com/ashrafbilalmohaidat2/Two-Tier-Architecture"
     },
     {
       id: 2,
-      title: "EcoStore E-commerce",
-      title_ar: "متجر إيكو الإلكتروني",
-      category: "E-commerce",
-      category_ar: "حلول التجارة الإلكترونية",
-      image: "https://placehold.co/600x400/1E3A8A/FFFFFF?text=EcoStore",
-      challenge: "Needed to create a seamless shopping experience for sustainable products.",
-      solution: "Developed a custom Shopify store with advanced filtering and personalized recommendations.",
-      technologies: ["Shopify", "Liquid", "JavaScript", "Stripe"],
-      results: "Achieved 30% conversion rate and 25% repeat customer rate within first quarter.",
-      link: "#"
+      title: "Image Analysis",
+      title_ar: "محلل الصور",
+      category: "Cloud & DevOps",
+      category_ar: "الحوسبة السحابية و DevOps",
+      image: "https://placehold.co/600x400/1E3A8A/FFFFFF?text=Image+Analysis",
+      challenge: "The client needed an automated and scalable solution to analyze and classify images in the cloud.",
+      solution: "Implemented a two-tier architecture on AWS and automated infrastructure provisioning with Terraform. Integrated AWS Rekognition for intelligent image analysis and ensured secure, scalable deployments.",
+      technologies: ["AWS", "AWS Rekognition", "JavaScript"],
+      results: "Reduced manual image processing time by 75%, improved classification accuracy, and delivered a scalable cloud-native solution.",
+      link: "https://github.com/ashrafbilalmohaidat2/ImageAnalysis"
+
     },
     {
       id: 3,
-      title: "HealthTrack Mobile App",
-      title_ar: "تطبيق تتبع الصحة",
-      category: "Mobile App",
-      category_ar: "تطبيقات الهواتف",
-      image: "https://placehold.co/600x400/00AEEF/FFFFFF?text=HealthTrack+App",
-      challenge: "Required a cross-platform health tracking application with sync capabilities.",
-      solution: "Created a React Native app with cloud sync, push notifications, and data visualization.",
-      technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
-      results: "4.8/5 rating on app stores with over 50,000 downloads in first 3 months.",
-      link: "#"
+      title: "Spices Food Blog",
+      title_ar: "مدونة التوابل الغذائية",
+      category: "Web Development (Frontend)",
+      category_ar: "تطوير الويب (الواجهة الأمامية)",
+      image: "https://placehold.co/600x400/00AEEF/FFFFFF?text=Spices+Food+Blog",
+      challenge: "The client wanted a responsive and visually appealing food blog with optimized performance.",
+      solution: "Built a React.js application with lazy loading for components and images to enhance performance and ensure a smooth user experience across devices.",
+      technologies: ["React.js", "HTML5", "CSS3", "JavaScript"],
+      results: "Improved page load speed by 40% and increased user engagement through an optimized browsing experience.",
+      link: "https://github.com/ashrafbilalmohaidat2/spices-resturant-app"
+
     }
   ];
 

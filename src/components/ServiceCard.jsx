@@ -38,11 +38,11 @@ const ServiceCard = ({ service, showDetails = false }) => {
               ))}
             </div>
           </div>
-          <div className="flex justify-between items-center pt-4 border-t border-gray-300">
+          <div className="flex justify-between items-center pt-4 border-t border-[#7bbbe6]">
             <div className="font-bold text-primary text-xl">{service.pricing}</div>
             <Link
               to="/contact"
-              className="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+              className="bg-[#7bbbe6] hover:bg-primary/80 text-gray-700 px-8 py-3 rounded-lg font-bold transition-colors duration-200"
             >
               {t("getQuote")}
             </Link>
