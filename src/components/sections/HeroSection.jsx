@@ -37,13 +37,13 @@ const HeroSection = () => {
             <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? 'items-end' : 'items-start'}`}> 
               <Link
                 to="/contact"
-                className="bg-[#00AEEF] hover:bg-[#0099cc] text-white font-medium py-3 sm:py-4 px-8 rounded-lg transition-colors duration-200 text-center"
+                className="w-full md:w-auto bg-[#00AEEF] hover:bg-[#0099cc] text-white font-medium py-3 sm:py-4 px-8 rounded-lg transition-colors duration-200 text-center"
               >
                 {t("consultationBtn")}
               </Link>
               <Link
                 to="/services"
-                className="border-2 border-white hover:bg-white hover:text-[#00AEEF] font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-center"
+                className="w-full md:w-auto border-2 border-white hover:bg-white hover:text-[#00AEEF] font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-center"
               >
                 {t("servicesBtn")}
               </Link>
