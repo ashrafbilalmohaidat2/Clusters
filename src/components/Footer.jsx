@@ -9,6 +9,7 @@ const Footer = () => {
   const isAr = i18n.language === "ar";
   const companyLinks = [
     { name: isAr ? t("about") : "About Us", path: "/about" },
+    { name: isAr ? t("services") : "Services", path: "/services" },
     { name: isAr ? t("portfolio") : "Portfolio", path: "/portfolio" },
     { name: isAr ? t("contact") : "Contact", path: "/contact" }
   ];
