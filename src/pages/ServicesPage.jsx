@@ -1,14 +1,22 @@
 // pages/ServicesPage.js
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import SEO from "../components/SEO";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data/mockData";
+import CloudDevOpsServices from "../components/sections/CloudDevOpsServices";
 
 const ServicesPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const title = t("seo.services.title");
+  const description = t("seo.services.description");
+  const keywords = t("seo.services.keywords", { returnObjects: true });
+  const canonicalPath = "/services";
+  const alternates = { "x-default": "/services", en: "/services", ar: "/services" };
   return (
     <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} keywords={keywords} canonicalPath={canonicalPath} alternates={alternates} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">{t("servicesTitle")}</h1>

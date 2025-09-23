@@ -22,7 +22,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
   // Set document direction for RTL/LTR, safe for browser only
   React.useEffect(() => {
     if (typeof document !== "undefined") {
-      document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+      const isArabic = i18n.language === "ar";
+      document.documentElement.dir = isArabic ? "rtl" : "ltr";
+      document.documentElement.lang = isArabic ? "ar" : "en";
     }
   }, [i18n.language]);
 
@@ -36,8 +38,19 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="w-20 h-20">
-              <img src="logoClusters.png" alt="Clusters Logo" />
+            <Link
+              to="/"
+              className="w-20 h-20"
+              onClick={(e) => {
+                if (location.pathname === "/") {
+                  if (typeof window !== "undefined" && window.scrollTo) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }
+              }}
+            >
+              <img src="logoClusters.png" alt="Clusters company logo" />
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -47,6 +60,14 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 <Link
                   key={item.path}
                   to={item.path}
+                  onClick={(e) => {
+                    if (item.path === "/" && location.pathname === "/") {
+                      if (typeof window !== "undefined" && window.scrollTo) {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }
+                  }}
                   className={`px-3 py-2 rounded-md text-md font-bold transition-colors duration-200 ${
                     isActive(item.path)
                       ? "bg-[#F0F9FF] text-[#00AEEF]"
@@ -104,7 +125,15 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               <Link
                 key={item.path}
                 to={item.path}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  if (item.path === "/" && location.pathname === "/") {
+                    if (typeof window !== "undefined" && window.scrollTo) {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }
+                  setIsMenuOpen(false);
+                }}
                 className={`block px-3 py-2 rounded-md text-base font-bold w-full text-left transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-[#F0F9FF] text-[#00AEEF]"

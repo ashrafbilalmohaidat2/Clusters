@@ -26,7 +26,7 @@ export const services = [
       technologies: ["React", "Node.js", "MongoDB", "AWS"],
       technologies_ar: ["ريأكت", "نود.جي إس", "مونغو دي بي", "خدمات أمازون السحابية"],
       //pricing: "Starting at $5,000",
-      icon: <img src={webdev} alt="Web Development" className="w-15 h-15 mx-auto"/>
+      icon: <img src={webdev} alt="Web Development services icon" className="w-15 h-15 mx-auto" loading="lazy"/>
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ export const services = [
       technologies: ["Figma", "Adobe XD", "Sketch", "InVision"],
       technologies_ar: ["فيجما", "أدوبي XD", "سكيتش", "إنفيجن"],
       //pricing: "Starting at $3,500",
-      icon: <img src={uiux} alt="UI/UX Design" className="w-15 h-15 mx-auto"/>
+      icon: <img src={uiux} alt="UI/UX Design services icon" className="w-15 h-15 mx-auto" loading="lazy"/>
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ export const services = [
       technologies: ["AWS EC2 & S3", "AWS Lambda", "AWS CloudFormation", "AWS RDS & DynamoDB", "Docker & Kubernetes", "Terraform", "CI/CD Tools (GitHub Actions, Jenkins)"],
       technologies_ar: ["خدمات EC2 وS3 من AWS", "لامبدا AWS", "AWS CloudFormation", "قواعد بيانات RDS وDynamoDB", "دوكر وKubernetes", "تيرافورم", "أدوات CI/CD (GitHub Actions, Jenkins)"],
       //pricing: "Starting at $8,000",
-      icon: <img src={devopscloud} alt="DevOps Cloud" className="w-15 h-15 mx-auto"/>
+      icon: <img src={devopscloud} alt="Cloud Engineering and DevOps services icon" className="w-15 h-15 mx-auto" loading="lazy"/>
     },
 
   ];
@@ -103,6 +103,7 @@ export const portfolioProjects = [
 
 export const teamMembers = [
     {
+      id: 1,
       name: "Sarah Johnson",
       name_ar: "سارة جونسون",
       role: "CEO & Lead Developer",
@@ -112,6 +113,7 @@ export const teamMembers = [
       image: "https://placehold.co/300x300/00AEEF/FFFFFF?text=SJ"
     },
     {
+      id: 2,
       name: "Michael Chen",
       name_ar: "مايكل تشين",
       role: "Design Director",
@@ -121,6 +123,7 @@ export const teamMembers = [
       image: "https://placehold.co/300x300/1E3A8A/FFFFFF?text=MC"
     },
     {
+      id: 3,
       name: "Alex Rodriguez",
       name_ar: "أليكس رودريغيز",
       role: "Senior Developer",
@@ -130,6 +133,7 @@ export const teamMembers = [
       image: "https://placehold.co/300x300/00AEEF/FFFFFF?text=AR"
     },
     {
+      id: 4,
       name: "Emma Wilson",
       name_ar: "إيما ويلسون",
       role: "Project Manager",

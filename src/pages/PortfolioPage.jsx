@@ -2,13 +2,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import SEO from "../components/SEO";
 import ProjectCard from "../components/ProjectCard";
 import { portfolioProjects } from "../data/mockData";
 
 const PortfolioPage = () => {
   const { t } = useTranslation();
+  const title = t("seo.portfolio.title");
+  const description = t("seo.portfolio.description");
+  const keywords = t("seo.portfolio.keywords", { returnObjects: true });
+  const canonicalPath = "/portfolio";
+  const alternates = { "x-default": "/portfolio", en: "/portfolio", ar: "/portfolio" };
   return (
     <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} keywords={keywords} canonicalPath={canonicalPath} alternates={alternates} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">{t("portfolio")}</h1>

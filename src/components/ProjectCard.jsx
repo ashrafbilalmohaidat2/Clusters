@@ -7,7 +7,7 @@ const ProjectCard = React.memo(({ project }) => {
   const { t, i18n } = useTranslation();
   const isAr = i18n.language === "ar";
   return (
-    <div className="group cursor-pointer">
+    <div className="group cursor-pointer border border-gray-300 rounded-xl p-3">
       <div className="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
         <img 
           src={project.image} 

@@ -78,6 +78,116 @@
   "mobileDevDesc": "Native and cross-platform mobile applications for iOS and Android devices.",
   "ecommerce": "E-commerce Solutions",
   "ecommerceDesc": "Complete online store setups with secure payment processing and inventory management.",
+  "viewDetails": "View Details",
+  "seo": {
+    "webDev": {
+      "title": "Web Development Services for Startups | Clusters",
+      "description": "Custom Web Development services for startups and SMBs: responsive websites, fast performance, SEO-ready, and scalable web apps.",
+      "keywords": [
+        "Web Development Services",
+        "Frontend Development",
+        "React Web Development",
+        "Web Development for Startups",
+        "Custom Websites",
+        "SEO Optimization",
+        "AI Solutions"
+      ]
+    },
+    "uiux": {
+      "title": "UI/UX Design Services for SaaS | Clusters",
+      "description": "Human-centered UI/UX Design services: wireframes, prototypes, design systems, and usability testing for SaaS and startups.",
+      "keywords": [
+        "UI UX Design Services",
+        "Product Design",
+        "Design Systems",
+        "UX Research",
+        "Prototyping",
+        "Accessibility",
+        "AI Solutions"
+      ]
+    },
+    "cloud": {
+      "title": "Cloud Engineering & DevOps Services | Clusters",
+      "description": "Cloud Engineering and Managed DevOps services: AWS infrastructure, CI/CD, Kubernetes, Terraform, monitoring, and cloud security.",
+      "keywords": [
+        "Cloud Engineering Services",
+        "Managed DevOps",
+        "AWS Consulting",
+        "Kubernetes",
+        "CI/CD Pipelines",
+        "Cloud Security",
+        "Cloud Migration",
+        "AI Solutions"
+      ]
+    }
+  },
+  "page": {
+    "webDev": {
+      "h1": "Web Development Services for Startups",
+      "intro": "We deliver high-performance, SEO-friendly, scalable websites and web apps.",
+      "h2a": "Custom Web Development",
+      "p2a": "Our Web Development services focus on building fast, secure, and responsive experiences. From landing pages to complex React web applications, we ensure your website is SEO-optimized and conversion-ready. If you need Web Development for Startups or a custom CMS, we can help.",
+      "h2b": "SEO-Ready Architecture",
+      "h3b": "Performance and Accessibility",
+      "p2b": "We leverage best practices for performance, accessibility, and technical SEO, including semantic HTML, lazy loading of non-critical assets, and metadata management."
+    },
+    "uiux": {
+      "h1": "UI/UX Design Services for SaaS",
+      "intro": "Design experiences that convert: research, wireframes, prototypes, and systems.",
+      "h2a": "Product Design & Prototyping",
+      "p2a": "Our UI/UX Design services include user research, prototyping, and usability testing to validate ideas quickly and craft delightful interfaces.",
+      "h2b": "Design Systems",
+      "h3b": "Consistency and Scalability",
+      "p2b": "We build scalable systems that keep your brand consistent while accelerating delivery."
+    },
+    "cloud": {
+      "h1": "Cloud Engineering Services for Startups",
+      "intro": "Cloud migration, cloud security, DevOps integration, and 24/7 reliability.",
+      "h2a": "Cloud Migration & Modernization",
+      "h3a": "AWS, Kubernetes, Terraform",
+      "p2a": "Our Cloud Engineering services include migration planning, infrastructure as code, container orchestration, and cost optimization. We provide Managed DevOps with CI/CD pipelines, monitoring, and autoscaling to keep you shipping safely.",
+      "h2b": "Cloud Security & Reliability",
+      "h3b": "Compliance and Observability",
+      "p2b": "We implement guardrails, logging, alerting, and disaster recovery to protect your workloads and ensure uptime."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Clusters | Cloud, DevOps, Web Development, UI/UX",
+      "description": "Clusters builds high-performance products: Cloud Engineering, Managed DevOps, Web Development, and UI/UX Design.",
+      "keywords": ["Cloud Engineering", "Managed DevOps", "Web Development", "UI/UX", "SaaS", "AI Solutions"]
+    },
+    "services": {
+      "title": "Services | Cloud, DevOps, Web, UI/UX | Clusters",
+      "description": "Explore our services: Cloud Engineering, DevOps, Web Development, and UI/UX Design tailored to your goals.",
+      "keywords": ["Cloud Services", "DevOps Services", "Web Development", "UI/UX Services"]
+    },
+    "about": {
+      "title": "About Clusters | Team and Vision",
+      "description": "We’re a team of engineers and designers delivering scalable, secure, and user-centered solutions.",
+      "keywords": ["About Clusters", "Our Team", "Our Vision"]
+    },
+    "portfolio": {
+      "title": "Portfolio | Featured Projects | Clusters",
+      "description": "See how we delivered Cloud, DevOps, and Web solutions that drive real results.",
+      "keywords": ["Portfolio", "Projects", "Case Studies"]
+    },
+    "contact": {
+      "title": "Contact Clusters | Get a Free Consultation",
+      "description": "Contact our team to discuss Cloud, DevOps, Web, or UI/UX needs and get a free consultation.",
+      "keywords": ["Contact", "Consultation", "Get in touch"]
+    },
+    "blog": {
+      "title": "Insights | Clusters Blog",
+      "description": "Thoughts on Cloud, DevOps, Web Development, and Design.",
+      "keywords": ["Blog", "Insights", "Tech", "Design"]
+    },
+    "careers": {
+      "title": "Careers at Clusters",
+      "description": "Join our team of builders across Cloud, DevOps, Web, and Design.",
+      "keywords": ["Careers", "Jobs", "Hiring"]
+    }
+  },
   
   "aboutpartnership": {
     "shopifyDesc": "Official Shopify Experts with proven track record of successful implementations.",

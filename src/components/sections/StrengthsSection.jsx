@@ -10,17 +10,17 @@ const StrengthsSection = () => {
     {
       title: t("strength1Title"),
       description: t("strength1Desc"),
-      icon: <img src={rocket} alt={t("strength1Title") || "Rocket"} className="w-15 h-15 mx-auto" />
+      icon: <img src={rocket} alt={(t("strength1Title") || "Rocket") + " icon for startup strengths"} className="w-15 h-15 mx-auto" loading="lazy" />
     },
     {
       title: t("strength2Title"),
       description: t("strength2Desc"),
-      icon: <img src={ontime} alt={t("strength2Title") || "On Time"} className="w-15 h-15 mx-auto" />
+      icon: <img src={ontime} alt={(t("strength2Title") || "On Time") + " delivery icon"} className="w-15 h-15 mx-auto" loading="lazy" />
     },
     {
       title: t("strength3Title"),
       description: t("strength3Desc"),
-      icon: <img src={ongoingsupport} alt={t("strength3Title") || "Ongoing Support"} className="w-15 h-15 mx-auto" />
+      icon: <img src={ongoingsupport} alt={(t("strength3Title") || "Ongoing Support") + " support icon"} className="w-15 h-15 mx-auto" loading="lazy" />
     }
   ];
 

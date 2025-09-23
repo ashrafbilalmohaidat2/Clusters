@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import SEO from "../components/SEO";
 
 const BlogPage = () => {
   const navigate = useNavigate();
@@ -55,9 +56,16 @@ const BlogPage = () => {
         }
       ];
 
+  const title = t("seo.blog.title");
+  const description = t("seo.blog.description");
+  const keywords = t("seo.blog.keywords", { returnObjects: true });
+  const canonicalPath = "/blog";
+  const alternates = { "x-default": "/blog", en: "/blog", ar: "/blog" };
+
   return (
     <section className="py-16 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SEO title={title} description={description} keywords={keywords} canonicalPath={canonicalPath} alternates={alternates} />
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-4">{t("blog")}</h2>
           <p className="text-xl text-[#9AA0A6] max-w-3xl mx-auto">

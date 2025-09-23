@@ -1,0 +1,161 @@
+import React from "react";
+import SEO from "../../components/SEO";
+
+const CloudDevOps = () => {
+  const title = "Cloud Engineering & DevOps Services | Clusters";
+  const description = "Cloud Engineering and Managed DevOps services: AWS infrastructure, CI/CD, Kubernetes, Terraform, monitoring, and cloud security.";
+  const keywords = [
+    "Cloud Engineering Services",
+    "Managed DevOps",
+    "AWS Consulting",
+    "Kubernetes",
+    "CI/CD Pipelines",
+    "Cloud Security",
+    "Cloud Migration",
+  ];
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Cloud Engineering & DevOps Services",
+    provider: {
+      "@type": "Organization",
+      name: "Clusters",
+    },
+    areaServed: "Worldwide",
+    serviceType: "Cloud & DevOps",
+    description,
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} keywords={keywords} jsonLd={jsonLd} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <header className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">Cloud Engineering Services for Startups</h1>
+          <p className="text-xl text-[#9AA0A6]">Cloud migration, cloud security, DevOps integration, and 24/7 reliability.</p>
+        </header>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-3">Cloud Migration & Modernization</h2>
+          <h3 className="text-xl font-semibold text-[#3C3C3C] mb-2">AWS, Kubernetes, Terraform</h3>
+          <p className="text-[#3C3C3C]">Our Cloud Engineering services include migration planning, infrastructure as code, container orchestration, and cost optimization. We provide Managed DevOps with CI/CD pipelines, monitoring, and autoscaling to keep you shipping safely.</p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-3">Cloud Security & Reliability</h2>
+          <h3 className="text-xl font-semibold text-[#3C3C3C] mb-2">Compliance and Observability</h3>
+          <p className="text-[#3C3C3C]">We implement guardrails, logging, alerting, and disaster recovery to protect your workloads and ensure uptime.</p>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default CloudDevOps;
+
+import React from "react";
+import SEO from "../../components/SEO";
+
+const UIUXDesign = () => {
+  const title = "UI/UX Design Services for SaaS | Clusters";
+  const description = "Human-centered UI/UX Design services: wireframes, prototypes, design systems, and usability testing for SaaS and startups.";
+  const keywords = [
+    "UI UX Design Services",
+    "Product Design",
+    "Design Systems",
+    "UX Research",
+    "Prototyping",
+  ];
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "UI/UX Design Services",
+    provider: {
+      "@type": "Organization",
+      name: "Clusters",
+    },
+    areaServed: "Worldwide",
+    serviceType: "UI/UX Design",
+    description,
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} keywords={keywords} jsonLd={jsonLd} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <header className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">UI/UX Design Services for SaaS</h1>
+          <p className="text-xl text-[#9AA0A6]">Design experiences that convert: research, wireframes, prototypes, and systems.</p>
+        </header>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-3">Product Design & Prototyping</h2>
+          <p className="text-[#3C3C3C]">Our UI/UX Design services include user research, prototyping, and usability testing to validate ideas quickly and craft delightful interfaces.</p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-3">Design Systems</h2>
+          <h3 className="text-xl font-semibold text-[#3C3C3C] mb-2">Consistency and Scalability</h3>
+          <p className="text-[#3C3C3C]">We build scalable systems that keep your brand consistent while accelerating delivery.</p>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default UIUXDesign;
+
+import React from "react";
+import SEO from "../../components/SEO";
+
+const WebDevelopment = () => {
+  const title = "Web Development Services for Startups | Clusters";
+  const description = "Custom Web Development services for startups and SMBs: responsive websites, fast performance, SEO-ready, and scalable web apps.";
+  const keywords = [
+    "Web Development Services",
+    "Frontend Development",
+    "React Web Development",
+    "Web Development for Startups",
+    "Custom Websites",
+    "SEO Optimization",
+  ];
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Web Development Services",
+    provider: {
+      "@type": "Organization",
+      name: "Clusters",
+    },
+    areaServed: "Worldwide",
+    serviceType: "Web Development",
+    description,
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} keywords={keywords} jsonLd={jsonLd} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <header className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">Web Development Services for Startups</h1>
+          <p className="text-xl text-[#9AA0A6]">We deliver high-performance, SEO-friendly, scalable websites and web apps.</p>
+        </header>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-3">Custom Web Development</h2>
+          <p className="text-[#3C3C3C]">Our Web Development services focus on building fast, secure, and responsive experiences. From landing pages to complex React web applications, we ensure your website is SEO-optimized and conversion-ready. If you need Web Development for Startups or a custom CMS, we can help.</p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-[#3C3C3C] mb-3">SEO-Ready Architecture</h2>
+          <h3 className="text-xl font-semibold text-[#3C3C3C] mb-2">Performance and Accessibility</h3>
+          <p className="text-[#3C3C3C]">We leverage best practices for performance, accessibility, and technical SEO, including semantic HTML, lazy loading of non-critical assets, and metadata management.</p>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default WebDevelopment;
+
+

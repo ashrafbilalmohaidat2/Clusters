@@ -2,6 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import SEO from "../components/SEO";
 import TeamMemberCard from "../components/TeamMemberCard";
 import { teamMembers } from "../data/mockData";
 import certificate from "../assets/certificate.png";
@@ -11,7 +12,12 @@ import partner from "../assets/partner.png";
 const AboutPage = () => {
   const navigate = useNavigate();
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const title = t("seo.about.title");
+  const description = t("seo.about.description");
+  const keywords = t("seo.about.keywords", { returnObjects: true });
+  const canonicalPath = "/about";
+  const alternates = { "x-default": "/about", en: "/about", ar: "/about" };
   const partnerships = [
     { icon: <img src={partner} alt="partner" className="w-15 h-15 mx-auto" />, title: t("Partnerships"), description: t("aboutpartnership.partnershipsDesc") },
     { icon: <img src={certificate} alt="Certificate" className="w-15 h-15 mx-auto" />, title: t("AWS Certified"), description: t("aboutpartnership.awsDesc") },
@@ -27,6 +33,7 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} keywords={keywords} canonicalPath={canonicalPath} alternates={alternates} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-16">
@@ -51,7 +58,7 @@ const AboutPage = () => {
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-8 text-center">{t("meetTeam")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member) => (
-              <TeamMemberCard key={member.id} member={member} />
+              <TeamMemberCard key={member.id || member.name} member={member} />
             ))}
           </div>
         </section>

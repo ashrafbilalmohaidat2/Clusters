@@ -6,10 +6,11 @@ import { useTranslation } from "react-i18next";
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
   const isAr = i18n.language === "ar";
+
   return (
-    <section className="text-white relative h-screen w-full overflow-hidden">
-      {/* Background video */}
-      <video
+    <section className="text-white relative h-screen w-full overflow-hidden bg-[#313131]">
+       {/* Background video */}
+       <video
         autoPlay
         loop
         muted
@@ -28,10 +29,10 @@ const HeroSection = () => {
 
           {/* Text Section */}
           <div className={`text-center ${isAr ? 'md:text-right' : 'md:text-left'}`}>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug font-sans !text-white ">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug font-sans !text-white">
               {t("heroTitle")}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-white font-sans">
+            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-white font-sans font-bold">
               {t("heroSubtitle")}
             </p>
             <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? 'items-end' : 'items-start'}`}> 
@@ -55,7 +56,7 @@ const HeroSection = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 max-w-full">
               <img
                 src="clusterslogo.png"
-                alt={t("heroTitle")}
+                alt={(t("heroTitle") || "Clusters") + " hero visual"}
                 className="rounded-lg w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain"
               />
             </div>

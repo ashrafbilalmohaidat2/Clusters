@@ -51,7 +51,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="mb-4 block">
-              <img src="logoClusters.png" alt="Logo" className="w-20 h-20" />
+              <img src="logoClusters.png" alt="Clusters company logo" className="w-20 h-20" />
             </Link>
             <p className="text-gray-300 mb-4 font-medium">
               {isAr ? t("footerDesc") : "Transforming businesses through innovative technology and creative design solutions."}
@@ -71,16 +71,32 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">{t("services")}</h4>
             <ul className="space-y-2 font-medium">
-              {services.slice(0, 4).map((service) => (
-                <li key={service.id}>
-                  <Link
-                    to="/services"
-                    className="text-gray-300 hover:text-[#00AEEF] transition-colors duration-200"
-                  >
-                    {isAr ? service.title_ar : service.title}
-                  </Link>
-                </li>
-              ))}
+              {services.slice(0, 4).map((service) => {
+                const title = isAr ? service.title_ar : service.title;
+                const lower = (service.title || "").toLowerCase();
+                const to = (() => {
+                  if (isAr) {
+                    if (lower.includes("cloud") || lower.includes("devops")) return "/خدمات-هندسة-السحابة-ودفوبس";
+                    if (lower.includes("ui") || lower.includes("ux")) return "/خدمات-تصميم-واجهات-وتجربة-المستخدم";
+                    if (lower.includes("web")) return "/خدمات-تطوير-الويب";
+                  } else {
+                    if (lower.includes("cloud") || lower.includes("devops")) return "/cloud-devops-services";
+                    if (lower.includes("ui") || lower.includes("ux")) return "/ui-ux-design-services";
+                    if (lower.includes("web")) return "/web-development-services";
+                  }
+                  return "/services";
+                })();
+                return (
+                  <li key={service.id}>
+                    <Link
+                      to={to}
+                      className="text-gray-300 hover:text-[#00AEEF] transition-colors duration-200"
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div>
@@ -101,7 +117,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-medium mb-4 text-[#00AEEF]">{t("contact")}</h4>
             <ul className="space-y-2 text-gray-300 font-medium">
-              <li className="hover:text-[#00AEEF] cursor-pointer" ><a mailto="hello@clusters.com">hello@clusters.com</a></li>
+              <li className="hover:text-[#00AEEF] cursor-pointer" ><a href="mailto:hello@clusters.com">hello@clusters.com</a></li>
               <li>+1 (555) 123-4567</li>
               <li>{isAr ? "123 شارع التكنولوجيا" : "123 Tech Avenue"}</li>
               <li>{isAr ? "سان فرانسيسكو، كاليفورنيا 94107" : "San Francisco, CA 94107"}</li>

@@ -38,15 +38,39 @@ const ServiceCard = ({ service, showDetails = false }) => {
               ))}
             </div>
           </div>
-          <div className="flex justify-between items-center pt-4 border-t border-[#7bbbe6]">
-            <div className="font-bold text-primary text-xl">{service.pricing}</div>
-            <Link
-              to="/contact"
-              className="bg-[#7bbbe6] hover:bg-primary/80 text-gray-700 px-8 py-3 rounded-lg font-bold transition-colors duration-200"
-            >
-              {t("getQuote")}
-            </Link>
-          </div>
+          <div className="flex flex-col sm:flex-row justify-between items-center pt-4 border-t border-[#7bbbe6] gap-4">
+              {/* السعر */}
+              <div className="font-bold text-primary text-xl">{service.pricing}</div>
+
+              {/* الأزرار */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link
+                  to="/contact"
+                  className="bg-[#7bbbe6] hover:bg-primary/80 text-gray-700 px-8 py-3 rounded-lg font-bold transition-colors duration-200 text-center w-full sm:w-auto cursor-pointer transform transition-transform hover:scale-105"
+                >
+                  {t("getQuote")}
+                </Link>
+
+                <Link
+                  to={(() => {
+                    const lower = (service.title || "").toLowerCase();
+                    if (isAr) {
+                      if (lower.includes("cloud") || lower.includes("devops")) return "/خدمات-هندسة-السحابة-ودفوبس";
+                      if (lower.includes("ui") || lower.includes("ux")) return "/خدمات-تصميم-واجهات-وتجربة-المستخدم";
+                      if (lower.includes("web")) return "/خدمات-تطوير-الويب";
+                    } else {
+                      if (lower.includes("cloud") || lower.includes("devops")) return "/cloud-devops-services";
+                      if (lower.includes("ui") || lower.includes("ux")) return "/ui-ux-design-services";
+                      if (lower.includes("web")) return "/web-development-services";
+                    }
+                    return "/services";
+                  })()}
+                  className="bg-[#7bbbe6] hover:bg-primary/80 text-gray-700 px-8 py-3 rounded-lg font-bold transition-colors duration-200 text-center w-full sm:w-auto cursor-pointer transform transition-transform hover:scale-105"
+                >
+                  {t("viewDetails")}
+                </Link>
+              </div>
+            </div>
         </div>
       </div>
     );
@@ -60,7 +84,19 @@ const ServiceCard = ({ service, showDetails = false }) => {
       <div className="flex justify-between items-center">
         <span className="font-semibold text-primary">{service.pricing}</span>
         <Link
-          to="/services"
+          to={(() => {
+            const lower = (service.title || "").toLowerCase();
+            if (isAr) {
+              if (lower.includes("cloud") || lower.includes("devops")) return "/خدمات-هندسة-السحابة-ودفوبس";
+              if (lower.includes("ui") || lower.includes("ux")) return "/خدمات-تصميم-واجهات-وتجربة-المستخدم";
+              if (lower.includes("web")) return "/خدمات-تطوير-الويب";
+            } else {
+              if (lower.includes("cloud") || lower.includes("devops")) return "/cloud-devops-services";
+              if (lower.includes("ui") || lower.includes("ux")) return "/ui-ux-design-services";
+              if (lower.includes("web")) return "/web-development-services";
+            }
+            return "/services";
+          })()}
           className="text-[#1166d5] hover:text-primary px-2 rounded-lg font-medium transition-colors duration-200"
         >
           {t("learnMore")}

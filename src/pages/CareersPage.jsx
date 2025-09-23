@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import SEO from "../components/SEO";
 
 const CareersPage = () => {
   const navigate = useNavigate();
@@ -35,8 +36,14 @@ const CareersPage = () => {
     navigate("/contact");
   };
 
+  const title = t("seo.careers.title");
+  const description = t("seo.careers.description");
+  const keywords = t("seo.careers.keywords", { returnObjects: true });
+  const canonicalPath = "/careers";
+  const alternates = { "x-default": "/careers", en: "/careers", ar: "/careers" };
   return (
     <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} keywords={keywords} canonicalPath={canonicalPath} alternates={alternates} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-[#3C3C3C] mb-4">{t("careers.joinTeam")}</h1>
