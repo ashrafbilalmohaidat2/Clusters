@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import SEO from "../components/SEO";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data/mockData";
-import CloudDevOpsServices from "../components/sections/CloudDevOpsServices";
 
 const ServicesPage = () => {
   const { t, i18n } = useTranslation();

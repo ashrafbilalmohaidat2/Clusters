@@ -81,8 +81,8 @@
   "viewDetails": "View Details",
   "seo": {
     "webDev": {
-      "title": "Web Development Services for Startups | Clusters",
-      "description": "Custom Web Development services for startups and SMBs: responsive websites, fast performance, SEO-ready, and scalable web apps.",
+      "title": "Web Development Services | Clusters",
+      "description": "Custom Web Development for individuals, startups, SMBs, and enterprises: responsive, fast, SEO-ready, and scalable.",
       "keywords": [
         "Web Development Services",
         "Frontend Development",
@@ -94,8 +94,8 @@
       ]
     },
     "uiux": {
-      "title": "UI/UX Design Services for SaaS | Clusters",
-      "description": "Human-centered UI/UX Design services: wireframes, prototypes, design systems, and usability testing for SaaS and startups.",
+      "title": "UI/UX Design Services | Clusters",
+      "description": "Human-centered UI/UX Design: research, wireframes, prototypes, design systems, and usability testing for any product.",
       "keywords": [
         "UI UX Design Services",
         "Product Design",
@@ -108,7 +108,7 @@
     },
     "cloud": {
       "title": "Cloud Engineering & DevOps Services | Clusters",
-      "description": "Cloud Engineering and Managed DevOps services: AWS infrastructure, CI/CD, Kubernetes, Terraform, monitoring, and cloud security.",
+      "description": "Cloud Engineering and Managed DevOps: AWS, CI/CD, Kubernetes, Terraform, monitoring, security — for any scale.",
       "keywords": [
         "Cloud Engineering Services",
         "Managed DevOps",
@@ -122,33 +122,205 @@
     }
   },
   "page": {
+    "common": {
+      "audiencesTitle": "Built for everyone",
+      "audiences": [
+        "Individuals & creators",
+        "Startups & SMBs",
+        "Enterprises & NGOs"
+      ]
+    },
     "webDev": {
-      "h1": "Web Development Services for Startups",
-      "intro": "We deliver high-performance, SEO-friendly, scalable websites and web apps.",
-      "h2a": "Custom Web Development",
-      "p2a": "Our Web Development services focus on building fast, secure, and responsive experiences. From landing pages to complex React web applications, we ensure your website is SEO-optimized and conversion-ready. If you need Web Development for Startups or a custom CMS, we can help.",
-      "h2b": "SEO-Ready Architecture",
-      "h3b": "Performance and Accessibility",
-      "p2b": "We leverage best practices for performance, accessibility, and technical SEO, including semantic HTML, lazy loading of non-critical assets, and metadata management."
+      "h1": "Web Development Services",
+      "intro": "High-performance, SEO-friendly, scalable websites and web apps for all.",
+      "serviceOverview": {
+        "title": "Service Overview",
+        "description": "Full-stack web development solutions that combine modern technologies with best practices to deliver exceptional user experiences.",
+        "features": [
+          "Custom web application development",
+          "Responsive and mobile-first design",
+          "SEO optimization and performance tuning",
+          "E-commerce and CMS solutions",
+          "API development and integration",
+          "Progressive Web App (PWA) development"
+        ]
+      },
+      "keyBenefits": {
+        "title": "Key Benefits",
+        "description": "Transform your digital presence with our comprehensive web development approach that drives results.",
+        "benefits": [
+          "Faster page load times (under 3 seconds)",
+          "Mobile-responsive across all devices",
+          "SEO-optimized for better search rankings",
+          "Secure and scalable architecture",
+          "Cross-browser compatibility",
+          "Ongoing maintenance and support"
+        ]
+      },
+      "toolsTechnologies": {
+        "title": "Tools & Technologies",
+        "description": "We leverage cutting-edge technologies and frameworks to build modern, efficient web applications.",
+        "tools": [
+          "React", "Next.js", "Vue.js", "Node.js", "TypeScript", "JavaScript",
+          "Tailwind CSS", "Sass", "Webpack", "Vite", "GraphQL", "REST APIs",
+          "MongoDB", "PostgreSQL", "Redis", "Docker", "AWS", "Vercel"
+        ]
+      },
+      "ourProcess": {
+        "title": "Our Process",
+        "description": "A systematic approach to web development that ensures quality, efficiency, and client satisfaction.",
+        "steps": [
+          {
+            "title": "Discovery & Planning",
+            "description": "We analyze your requirements, define project scope, and create a detailed development roadmap."
+          },
+          {
+            "title": "Design & Prototyping",
+            "description": "Create wireframes, mockups, and interactive prototypes to visualize the final product."
+          },
+          {
+            "title": "Development & Testing",
+            "description": "Build the application using best practices, implement features, and conduct thorough testing."
+          },
+          {
+            "title": "Deployment & Launch",
+            "description": "Deploy to production, configure monitoring, and provide training and documentation."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to build something fast?",
+        "subtitle": "Tell us about your product and timelines.",
+        "button": "Start a project"
+      }
     },
     "uiux": {
-      "h1": "UI/UX Design Services for SaaS",
-      "intro": "Design experiences that convert: research, wireframes, prototypes, and systems.",
-      "h2a": "Product Design & Prototyping",
-      "p2a": "Our UI/UX Design services include user research, prototyping, and usability testing to validate ideas quickly and craft delightful interfaces.",
-      "h2b": "Design Systems",
-      "h3b": "Consistency and Scalability",
-      "p2b": "We build scalable systems that keep your brand consistent while accelerating delivery."
+      "h1": "UI/UX Design Services",
+      "intro": "Design experiences that convert: research, wireframes, prototypes, and systems — for any product.",
+      "serviceOverview": {
+        "title": "Service Overview",
+        "description": "Comprehensive UI/UX design services that focus on user-centered design principles to create engaging and effective digital experiences.",
+        "features": [
+          "User research and persona development",
+          "Information architecture and user flows",
+          "Wireframing and interactive prototyping",
+          "Visual design and brand integration",
+          "Usability testing and optimization",
+          "Design system creation and maintenance"
+        ]
+      },
+      "keyBenefits": {
+        "title": "Key Benefits",
+        "description": "Transform your product with our user-centered design approach that drives engagement and conversions.",
+        "benefits": [
+          "Increased user engagement by up to 50%",
+          "Improved conversion rates and user satisfaction",
+          "Consistent brand experience across platforms",
+          "Reduced development time with design systems",
+          "Accessible and inclusive design solutions",
+          "Data-driven design decisions"
+        ]
+      },
+      "toolsTechnologies": {
+        "title": "Tools & Technologies",
+        "description": "We use industry-standard design tools and methodologies to create exceptional user experiences.",
+        "tools": [
+          "Figma", "Sketch", "Adobe XD", "Principle", "InVision", "Marvel",
+          "Miro", "Optimal Workshop", "Hotjar", "Google Analytics", "Zeplin",
+          "Abstract", "Framer", "Protopie", "UserTesting", "Lookback"
+        ]
+      },
+      "ourProcess": {
+        "title": "Our Process",
+        "description": "A proven design process that ensures user needs are met while achieving business objectives.",
+        "steps": [
+          {
+            "title": "Research & Discovery",
+            "description": "Conduct user research, analyze competitors, and define user personas and requirements."
+          },
+          {
+            "title": "Strategy & Planning",
+            "description": "Create information architecture, user journeys, and establish design principles and guidelines."
+          },
+          {
+            "title": "Design & Prototyping",
+            "description": "Develop wireframes, visual designs, and interactive prototypes for testing and validation."
+          },
+          {
+            "title": "Testing & Iteration",
+            "description": "Conduct usability testing, gather feedback, and iterate on designs for optimal user experience."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Design that converts",
+        "subtitle": "Let's craft a delightful product experience.",
+        "button": "Get design help"
+      }
     },
     "cloud": {
-      "h1": "Cloud Engineering Services for Startups",
-      "intro": "Cloud migration, cloud security, DevOps integration, and 24/7 reliability.",
-      "h2a": "Cloud Migration & Modernization",
-      "h3a": "AWS, Kubernetes, Terraform",
-      "p2a": "Our Cloud Engineering services include migration planning, infrastructure as code, container orchestration, and cost optimization. We provide Managed DevOps with CI/CD pipelines, monitoring, and autoscaling to keep you shipping safely.",
-      "h2b": "Cloud Security & Reliability",
-      "h3b": "Compliance and Observability",
-      "p2b": "We implement guardrails, logging, alerting, and disaster recovery to protect your workloads and ensure uptime."
+      "h1": "Cloud & DevOps Services",
+      "intro": "We design and manage cloud infrastructures for teams of any size — always available, secure, and ready to grow.",
+      "serviceOverview": {
+        "title": "Service Overview",
+        "description": "Comprehensive cloud engineering solutions designed to modernize your infrastructure and streamline your development workflows.",
+        "features": [
+          "Cloud migration and modernization",
+          "Infrastructure as Code implementation",
+          "Container orchestration with Kubernetes",
+          "CI/CD pipeline automation",
+          "Cloud security and compliance",
+          "Cost optimization and monitoring"
+        ]
+      },
+      "keyBenefits": {
+        "title": "Key Benefits",
+        "description": "Transform your infrastructure with our proven cloud engineering approach that delivers measurable results.",
+        "benefits": [
+          "Reduced infrastructure costs by up to 40%",
+          "99.9% uptime with automated scaling",
+          "Faster deployment cycles with CI/CD",
+          "Enhanced security and compliance",
+          "Improved team productivity",
+          "Future-proof architecture design"
+        ]
+      },
+      "toolsTechnologies": {
+        "title": "Tools & Technologies",
+        "description": "We use industry-leading tools and technologies to build robust, scalable cloud solutions.",
+        "tools": [
+          "AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform",
+          "Ansible", "Jenkins", "GitLab CI", "Prometheus", "Grafana", "ELK Stack",
+          "Helm", "Istio", "Vault", "Consul", "Nomad", "Packer"
+        ]
+      },
+      "ourProcess": {
+        "title": "Our Process",
+        "description": "A structured approach to cloud transformation that ensures successful outcomes and minimal disruption.",
+        "steps": [
+          {
+            "title": "Assessment & Planning",
+            "description": "We analyze your current infrastructure, identify optimization opportunities, and create a detailed migration roadmap."
+          },
+          {
+            "title": "Architecture Design",
+            "description": "Design a scalable, secure cloud architecture tailored to your specific requirements and business goals."
+          },
+          {
+            "title": "Implementation",
+            "description": "Deploy infrastructure as code, set up CI/CD pipelines, and migrate your applications with minimal downtime."
+          },
+          {
+            "title": "Monitoring & Optimization",
+            "description": "Implement comprehensive monitoring, establish best practices, and continuously optimize for performance and cost."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Need reliable cloud at scale?",
+        "subtitle": "Our DevOps team can get you there.",
+        "button": "Talk to an expert"
+      }
     }
   },
   "seo": {

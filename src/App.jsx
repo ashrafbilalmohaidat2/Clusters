@@ -6,15 +6,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
-import WebDevelopment from "./pages/WebDevelopment";
-import UIUXDesign from "./pages/UIUXDesign";
-import CloudDevOps from "./pages/CloudDevOps";
+import WebDevelopment from "./ServicesPages/WebDevelopment";
+import UIUXDesign from "./ServicesPages/UIUXDesign";
+import CloudDevOps from "./ServicesPages/CloudDevOps";
 import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import ScrollToTop from "./components/ScrollToTop";
-import CloudDevOpsServices from "./components/sections/CloudDevOpsServices";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +36,6 @@ const App = () => {
           <Route path="/خدمات-هندسة-السحابة-ودفوبس" element={<CloudDevOps />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/clouddevopsservices" element={<CloudDevOpsServices />} />
         </Routes>
       </main>
       <Footer />
