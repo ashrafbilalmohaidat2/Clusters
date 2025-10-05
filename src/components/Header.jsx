@@ -18,15 +18,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
 
   const isActive = (path) => location.pathname === path;
 
-  // Handle RTL direction
-  // Set document direction for RTL/LTR, safe for browser only
-  React.useEffect(() => {
-    if (typeof document !== "undefined") {
-      const isArabic = i18n.language === "ar";
-      document.documentElement.dir = isArabic ? "rtl" : "ltr";
-      document.documentElement.lang = isArabic ? "ar" : "en";
-    }
-  }, [i18n.language]);
+
 
   // Language switcher
   const handleLanguageChange = (lng) => {
@@ -55,7 +47,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
           </div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ms-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -79,7 +71,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               ))}
             </div>
             {/* Language Switcher */}
-            <div className="ml-6 flex gap-2">
+            <div className="ms-6 flex gap-2">
               <button
                 onClick={() => handleLanguageChange("en")}
                 className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all hover:cursor-pointer duration-200 focus:outline-none border-2
@@ -134,7 +126,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                   }
                   setIsMenuOpen(false);
                 }}
-                className={`block px-3 py-2 rounded-md text-base font-bold w-full text-left transition-colors duration-200 ${
+                className={`block px-3 py-2 rounded-md text-base font-bold w-full text-start transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-[#F0F9FF] text-[#00AEEF]"
                     : "text-[#3C3C3C] hover:bg-[#F8FAFC] hover:text-[#00AEEF]"

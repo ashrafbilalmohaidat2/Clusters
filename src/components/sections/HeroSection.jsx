@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const { t, i18n } = useTranslation();
-  const isAr = i18n.language === "ar";
+  const { t } = useTranslation();
 
   return (
     <section className="text-white relative h-screen w-full overflow-hidden bg-[#313131]">
@@ -28,14 +27,14 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center w-full">
 
           {/* Text Section */}
-          <div className={`text-center ${isAr ? 'md:text-right' : 'md:text-left'}`}>
+          <div className="text-center md:text-start">
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug font-sans !text-white">
               {t("heroTitle")}
             </h1>
             <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-white font-sans font-bold">
               {t("heroSubtitle")}
             </p>
-            <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? 'items-end' : 'items-start'}`}> 
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Link
                 to="/contact"
                 className="w-full md:w-auto bg-[#00AEEF] hover:bg-[#0099cc] text-white font-medium py-3 sm:py-4 px-8 rounded-lg transition-colors duration-200 text-center"

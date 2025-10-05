@@ -140,9 +140,7 @@
           "Custom web application development",
           "Responsive and mobile-first design",
           "SEO optimization and performance tuning",
-          "E-commerce and CMS solutions",
-          "API development and integration",
-          "Progressive Web App (PWA) development"
+          "API development and integration"
         ]
       },
       "keyBenefits": {
@@ -205,8 +203,7 @@
           "Information architecture and user flows",
           "Wireframing and interactive prototyping",
           "Visual design and brand integration",
-          "Usability testing and optimization",
-          "Design system creation and maintenance"
+          "Usability testing and optimization"
         ]
       },
       "keyBenefits": {
@@ -255,12 +252,12 @@
       "cta": {
         "title": "Design that converts",
         "subtitle": "Let's craft a delightful product experience.",
-        "button": "Get design help"
+        "button": "Get your own design"
       }
     },
     "cloud": {
       "h1": "Cloud & DevOps Services",
-      "intro": "We design and manage cloud infrastructures for teams of any size — always available, secure, and ready to grow.",
+      "intro": "We design and manage cloud infrastructures for all — always available, secure, and ready to grow.",
       "serviceOverview": {
         "title": "Service Overview",
         "description": "Comprehensive cloud engineering solutions designed to modernize your infrastructure and streamline your development workflows.",
@@ -318,7 +315,7 @@
       },
       "cta": {
         "title": "Need reliable cloud at scale?",
-        "subtitle": "Our DevOps team can get you there.",
+        "subtitle": "Our Devops team is ready to deliver results.",
         "button": "Talk to an expert"
       }
     }

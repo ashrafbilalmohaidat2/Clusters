@@ -128,11 +128,11 @@ const CloudDevOps = () => {
             <div className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ${isAr ? 'text-right' : 'text-left'}`}>
               {(Array.isArray(t("page.cloud.serviceOverview.features", { returnObjects: true })) ? t("page.cloud.serviceOverview.features", { returnObjects: true }) : []).map((item, idx) => (
                 <div key={idx} className="bg-gradient-to-br from-gray-50 to-white border border-[#66D9EF]/20 rounded-2xl p-6 text-[#1A1A3A] hover:border-[#66D9EF]/40 hover:shadow-lg hover:shadow-[#66D9EF]/10 transition-all duration-300 group">
-                  <div className={`flex items-start ${isAr ? 'flex-row-reverse' : 'flex-row'}`}>
+                  <div className={`flex items-start`}>
                     <span className={`inline-block bg-gradient-to-r from-[#66D9EF] to-[#36C9C9] text-white text-sm font-bold px-3 py-1 rounded-lg group-hover:scale-110 transition-transform duration-300 ${isAr ? 'ml-3' : 'mr-3'}`}>
                       {idx + 1}
                     </span>
-                    <p className="text-gray-700 group-hover:text-[#1A1A3A] transition-colors duration-300">{item}</p>
+                    <p className="text-gray-700 group-hover:text-[#1A1A3A] transition-colors duration-300 font-bold">{item}</p>
                   </div>
                 </div>
               ))}
@@ -153,30 +153,9 @@ const CloudDevOps = () => {
             
             <div className={`grid sm:grid-cols-2 gap-6 ${isAr ? 'text-right' : 'text-left'}`}>
               {(Array.isArray(t("page.cloud.keyBenefits.benefits", { returnObjects: true })) ? t("page.cloud.keyBenefits.benefits", { returnObjects: true }) : []).map((benefit, i) => (
-                <div key={i} className={`flex items-start bg-gradient-to-br from-gray-50 to-white border border-[#36C9C9]/20 rounded-2xl p-6 hover:border-[#36C9C9]/40 hover:shadow-lg hover:shadow-[#36C9C9]/10 transition-all duration-300 group ${isAr ? 'flex-row-reverse' : 'flex-row'}`}>
+                <div key={i} className={`flex items-start bg-gradient-to-br from-gray-50 to-white border border-[#36C9C9]/20 rounded-2xl p-6 hover:border-[#36C9C9]/40 hover:shadow-lg hover:shadow-[#36C9C9]/10 transition-all duration-300 group`}>
                   <div className={`h-3 w-3 rounded-full bg-gradient-to-r from-[#36C9C9] to-[#66D9EF] mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300 ${isAr ? 'ml-4' : 'mr-4'}`} />
-                  <p className="text-gray-700 group-hover:text-[#1A1A3A] transition-colors duration-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Tools and Technologies */}
-        <section className="mb-16">
-          <div className="bg-white rounded-3xl p-8 border border-[#66D9EF]/20 shadow-xl">
-            <h2 className="text-3xl font-bold text-[#1A1A3A] mb-4 flex items-center">
-              <div className={`w-8 h-8 bg-gradient-to-r from-[#66D9EF] to-[#36C9C9] rounded-full flex items-center justify-center ${isAr ? 'ml-4' : 'mr-4'}`}>
-                <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-              </div>
-              {t("page.cloud.toolsTechnologies.title")}
-            </h2>
-            <p className="text-gray-600 mb-8 text-lg leading-relaxed">{t("page.cloud.toolsTechnologies.description")}</p>
-            
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {(Array.isArray(t("page.cloud.toolsTechnologies.tools", { returnObjects: true })) ? t("page.cloud.toolsTechnologies.tools", { returnObjects: true }) : []).map((tool, i) => (
-                <div key={i} className="bg-gradient-to-r from-[#66D9EF]/10 to-[#36C9C9]/10 border border-[#66D9EF]/30 text-[#1A1A3A] px-4 py-3 rounded-xl text-sm font-medium hover:from-[#66D9EF]/20 hover:to-[#36C9C9]/20 transition-all duration-300 hover:scale-105 text-center">
-                  {tool}
+                  <p className="text-gray-700 group-hover:text-[#1A1A3A] transition-colors duration-300 text-lg font-bold">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -195,14 +174,17 @@ const CloudDevOps = () => {
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">{t("page.cloud.ourProcess.description")}</p>
             
             <div className="space-y-6">
-              {(Array.isArray(t("page.cloud.ourProcess.steps", { returnObjects: true })) ? t("page.cloud.ourProcess.steps", { returnObjects: true }) : []).map((step, i) => (
-                <div key={i} className={`flex items-start ${isAr ? 'flex-row-reverse' : 'flex-row'}`}>
-                  <div className={`w-12 h-12 bg-gradient-to-r from-[#66D9EF] to-[#36C9C9] rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0 ${isAr ? 'ml-6' : 'mr-6'}`}>
-                    {i + 1}
-                  </div>
-                  <div className={`flex-1 ${isAr ? 'text-right' : 'text-left'}`}>
-                    <h3 className="text-xl font-semibold text-[#1A1A3A] mb-2">{step.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              {(Array.isArray(t("page.cloud.ourProcess.steps", { returnObjects: true }))
+                ? t("page.cloud.ourProcess.steps", { returnObjects: true }): []).map((step, i) => (
+                <div key={i} className="group">
+                  <div className="flex items-start space-x-4 bg-gradient-to-br from-gray-50 to-white border border-[#66D9EF]/20 rounded-2xl p-6 transition-all duration-300 hover:border-[#66D9EF]/40 hover:shadow-lg hover:shadow-[#66D9EF]/10">
+                    <div className="flex-shrink-0 h-12 w-12 rounded-full bg-gradient-to-r from-[#66D9EF] to-[#36C9C9] text-white flex items-center justify-center font-bold text-lg">
+                      {i + 1}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-[#1A1A3A] mb-2">{step.title}</h3>
+                      <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -210,7 +192,7 @@ const CloudDevOps = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-[#66D9EF] via-[#36C9C9] to-[#66D9EF] text-white rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden shadow-2xl">
+        <section className="bg-gradient-to-r from-[#178de1] via-[#36C9C9] to-[#178de1] text-white rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden shadow-2xl">
           {/* Animated background elements */}
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/10 to-transparent animate-pulse"></div>
@@ -219,7 +201,7 @@ const CloudDevOps = () => {
           </div>
           
           <div className={`mb-6 md:mb-0 relative z-10 ${isAr ? 'md:text-right' : 'md:text-left'}`}>
-            <h3 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-[#1A1A3A] bg-clip-text text-transparent">
+            <h3 className="text-4xl font-bold mb-4">
               {t("page.cloud.cta.title")}
             </h3>
             <p className="text-xl text-white/90 leading-relaxed">{t("page.cloud.cta.subtitle")}</p>
@@ -227,11 +209,11 @@ const CloudDevOps = () => {
           
           <a 
             href="/contact" 
-            className="bg-gradient-to-r from-[#1A1A3A] to-[#2A2A4A] text-white hover:from-[#2A2A4A] hover:to-[#1A1A3A] px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl border border-white/20 relative z-10 group"
+            className="bg-[#f9fbfc] text-[#178de1] px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl border border-white/20 relative z-10 group"
           >
             <span className="flex items-center">
               {t("page.cloud.cta.button")}
-              <div className={`w-2 h-2 bg-white rounded-full group-hover:animate-ping ${isAr ? 'mr-2' : 'ml-2'}`}></div>
+              <div className={`w-2 h-2 bg-[#178de1] rounded-full group-hover:animate-ping ${isAr ? 'mr-2' : 'ml-2'}`}></div>
             </span>
           </a>
         </section>
