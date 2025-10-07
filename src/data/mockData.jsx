@@ -96,7 +96,7 @@ export const portfolioProjects = [
       solution: "Built a React.js application with lazy loading for components and images to enhance performance and ensure a smooth user experience across devices.",
       technologies: ["React.js", "HTML5", "CSS3", "JavaScript"],
       results: "Improved page load speed by 40% and increased user engagement through an optimized browsing experience.",
-      link: "https://github.com/ashrafbilalmohaidat2/spices-resturant-app"
+      link: "spices-resturant-app-teal.vercel.app"
 
     }
   ];
