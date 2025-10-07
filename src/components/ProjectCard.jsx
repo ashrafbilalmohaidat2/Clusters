@@ -16,7 +16,7 @@ const ProjectCard = React.memo(({ project }) => {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-          <a href={project.link} target="_blank" className="opacity-0 group-hover:opacity-100 bg-white text-primary px-6 py-2 rounded-lg font-medium transition-opacity duration-300 hover:cursor-pointer" aria-label={t("viewDetails") || "View Details"}>
+          <a href={project.link} target="_blank" className="opacity-0 group-hover:opacity-100 bg-gray-300 text-gray-700 font-bold px-6 py-2 rounded-lg transition-opacity duration-300 hover:cursor-pointer" aria-label={t("viewDetails") || "View Details"}>
             {t("viewDetails")}
           </a>
         </div>

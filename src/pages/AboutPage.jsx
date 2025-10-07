@@ -21,7 +21,6 @@ const AboutPage = () => {
   const partnerships = [
     { icon: <img src={partner} alt="partner" className="w-15 h-15 mx-auto" />, title: t("Partnerships"), description: t("aboutpartnership.partnershipsDesc") },
     { icon: <img src={certificate} alt="Certificate" className="w-15 h-15 mx-auto" />, title: t("AWS Certified"), description: t("aboutpartnership.awsDesc") },
-    { icon: <img src={expertsImg} alt="Experts" className="w-15 h-15 mx-auto" />, title: t("Shopify Experts"), description: t("aboutpartnership.shopifyDesc") },
   ];
 
   const coreValues = [
@@ -53,7 +52,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Team Section */}
+        {/* Team Section 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-8 text-center">{t("meetTeam")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -61,7 +60,7 @@ const AboutPage = () => {
               <TeamMemberCard key={member.id || member.name} member={member} />
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* Values Section */}
         <section className="mb-16">
@@ -70,7 +69,7 @@ const AboutPage = () => {
             {coreValues.map((value) => (
               <div key={value.title} className="text-center p-6 bg-[#F8FAFC] rounded-xl">
                 <h3 className="text-xl font-bold text-[#3C3C3C] mb-3">{value.title}</h3>
-                <p className="text-[#9AA0A6]">{value.description}</p>
+                <p className="text-[#676767]">{value.description}</p>
               </div>
             ))}
           </div>
@@ -80,12 +79,12 @@ const AboutPage = () => {
         <section>
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-8 text-center">{t("partnerships")}</h2>
           <div className="bg-[#efeff0] rounded-xl p-8">
-            <div className="grid md:grid-cols-3 gap-8 items-center">
+            <div className="grid md:grid-cols-1 gap-8 items-center">
               {partnerships.map((p) => (
                 <div key={p.title} className="text-center">
                   <div className="text-4xl mb-4">{p.icon}</div>
                   <h3 className="text-lg font-bold text-[#3C3C3C] mb-2">{p.title}</h3>
-                  <p className="text-[#9AA0A6]">{p.description}</p>
+                  <p className="text-[#757677]">{p.description}</p>
                 </div>
               ))}
             </div>

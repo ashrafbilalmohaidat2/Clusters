@@ -41,7 +41,7 @@
   "aboutTitle": "About Clusters",
   "aboutSubtitle": "We're a team of passionate developers and designers committed to creating exceptional digital experiences.",
   "ourVision": "Our Vision",
-  "visionText": "To be the most trusted digital partner for businesses worldwide, delivering innovative solutions that drive growth and create lasting value. We believe technology should empower, not complicate, and we're dedicated to making digital transformation accessible to organizations of all sizes.",
+  "visionText": "To be the most trusted digital partner for businesses worldwide, delivering innovative solutions that drive growth and create lasting value. We believe technology should empower, not complicate, and we're dedicated to making digital transformation accessible to everyone.",
   "meetTeam": "Meet Our Team",
   "coreValues": "Our Core Values",
   "excellence": "Excellence",
@@ -360,7 +360,7 @@
   
   "aboutpartnership": {
     "shopifyDesc": "Official Shopify Experts with proven track record of successful implementations.",
-    "awsDesc": "Multiple team members hold AWS certifications for cloud architecture.",
+    "awsDesc": "Multiple team members hold (AWS & Alibaba Cloud) certifications for cloud architecture.",
     "partnershipsDesc": "We have established partnerships with leading tech companies."
 
   },
