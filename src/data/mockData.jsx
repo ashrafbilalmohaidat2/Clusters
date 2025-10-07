@@ -2,7 +2,7 @@ import React from "react";
 import devopscloud from "../assets/devopscloud.png"
 import webdev from "../assets/web.png"
 import uiux from "../assets/UIUX.png"
-import twotier from "../assets/twotier.png"
+
 // data/mockData.js
 export const colors = {
   mainBlue: "#1b5e82",
@@ -64,7 +64,7 @@ export const portfolioProjects = [
       title_ar: "بنية تحتية ذات طبقتين",
       category: "Cloud & DevOps",
       category_ar: "الحوسبة السحابية و DevOps",
-      image: "src/assets/twotier.png",
+      image: "https://placehold.co/600x400/00AEEF/FFFFFF?text=CloudDevOps",
       challenge: "The client needed a reliable and scalable cloud infrastructure to support their growing applications and ensure high availability.",
       solution: "Designed and deployed a two-tier architecture on AWS using Terraform for Infrastructure as Code (IaC). Automated the provisioning of VPC, subnets, EC2 instances, and RDS with proper security groups and load balancing.",
       technologies: ["AWS", "Terraform"],
