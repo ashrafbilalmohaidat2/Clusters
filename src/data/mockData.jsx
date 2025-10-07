@@ -73,20 +73,6 @@ export const portfolioProjects = [
     },
     {
       id: 2,
-      title: "Image Analysis",
-      title_ar: "محلل الصور",
-      category: "Cloud & DevOps",
-      category_ar: "الحوسبة السحابية و DevOps",
-      image: "https://placehold.co/600x400/1E3A8A/FFFFFF?text=Image+Analysis",
-      challenge: "The client needed an automated and scalable solution to analyze and classify images in the cloud.",
-      solution: "Implemented a two-tier architecture on AWS and automated infrastructure provisioning with Terraform. Integrated AWS Rekognition for intelligent image analysis and ensured secure, scalable deployments.",
-      technologies: ["AWS", "AWS Rekognition", "JavaScript"],
-      results: "Reduced manual image processing time by 75%, improved classification accuracy, and delivered a scalable cloud-native solution.",
-      link: "https://github.com/ashrafbilalmohaidat2/ImageAnalysis"
-
-    },
-    {
-      id: 3,
       title: "Spices Food Blog",
       title_ar: "مدونة التوابل الغذائية",
       category: "Web Development (Frontend)",
