@@ -29,19 +29,24 @@ const ServiceCard = ({ service, showDetails = false }) => {
     return (
       <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
         {/* Header */}
-        <div className={`flex flex-col sm:flex-row ${isAr ? "sm:flex-row-reverse" : ""} items-start mb-8`}>
-          <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 mb-4 sm:mb-0">
-            {service.icon}
+        <div
+            className={`flex flex-col sm:flex-row items-center mb-8 sm:items-start ${
+              isAr ? "text-right" : "text-left"
+            }`}
+          >
+            <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 mb-4 sm:mb-0">
+              {service.icon}
+            </div>
+            <div className={`${isAr ? "sm:mr-6" : "sm:ml-6"} w-full sm:w-auto`}>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-3">
+                {isAr ? service.title_ar : service.title}
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+                {isAr ? service.description_ar : service.description}
+              </p>
+            </div>
           </div>
-          <div className={`${isAr ? "sm:mr-6" : "sm:ml-6"}`}>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-3">
-              {isAr ? service.title_ar : service.title}
-            </h2>
-            <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
-              {isAr ? service.description_ar : service.description}
-            </p>
-          </div>
-        </div>
+
 
         {/* Details */}
         <div className="space-y-8">

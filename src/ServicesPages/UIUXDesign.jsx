@@ -180,6 +180,57 @@ const UIUXDesign = () => {
           </div>
         </section>
 
+        {/* Packages */}
+        <section className="mb-16">
+          <div className="bg-white rounded-3xl p-8 border border-[#66D9EF]/20 shadow-xl">
+            <h2 className="text-3xl font-bold text-[#1A1A3A] mb-4 flex items-center">
+              <div className={`w-8 h-8 bg-gradient-to-r from-[#36C9C9] to-[#66D9EF] rounded-full flex items-center justify-center ${isAr ? 'ml-4' : 'mr-4'}`}>
+                <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+              </div>
+              {t("page.uiux.packages.title")}
+            </h2>
+
+            <div className={`grid md:grid-cols-3 gap-8 ${isAr ? 'text-right' : 'text-left'}`}>
+              <div className="bg-gradient-to-br from-[#66D9EF] to-[#36C9C9] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+                <h3 className="text-2xl font-bold mb-4">{t('page.uiux.packages.basic.title')}</h3>
+                <ul className="list-disc list-inside mb-6 leading-relaxed text-white/90">
+                  {(Array.isArray(t('page.uiux.packages.basic.features', { returnObjects: true })) ? t('page.uiux.packages.basic.features', { returnObjects: true }) : []).map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+                <div className="text-3xl font-bold mb-6">{t('page.uiux.packages.basic.price')}</div>
+                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  {t('page.uiux.packages.getStarted')}
+                </button>
+              </div>
+              <div className="bg-gradient-to-br from-[#36C9C9] to-[#178de1] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+                <h3 className="text-2xl font-bold mb-4">{t('page.uiux.packages.professional.title')}</h3>
+                <ul className="list-disc list-inside mb-6 leading-relaxed text-white/90">
+                  {(Array.isArray(t('page.uiux.packages.professional.features', { returnObjects: true })) ? t('page.uiux.packages.professional.features', { returnObjects: true }) : []).map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+                <div className="text-3xl font-bold mb-6">{t('page.uiux.packages.professional.price')}</div>
+                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  {t('page.uiux.packages.getStarted')}
+                </button>
+              </div>
+              <div className="bg-gradient-to-br from-[#178de1] to-[#66D9EF] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+                <h3 className="text-2xl font-bold mb-4">{t('page.uiux.packages.advanced.title')}</h3>
+                <ul className="list-disc list-inside mb-6 leading-relaxed text-white/90">
+                  {(Array.isArray(t('page.uiux.packages.advanced.features', { returnObjects: true })) ? t('page.uiux.packages.advanced.features', { returnObjects: true }) : []).map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+                <div className="text-3xl font-bold mb-6">{t('page.uiux.packages.advanced.price')}</div>
+                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  {t('page.uiux.packages.getStarted')}
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-gradient-to-r from-[#178de1] via-[#36C9C9] to-[#178de1] text-white rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden shadow-2xl">
           {/* Animated background elements */}
           <div className="absolute inset-0 opacity-20">

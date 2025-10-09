@@ -192,6 +192,84 @@ const CloudDevOps = () => {
           </div>
         </section>
 
+        {/* Packages */}
+        <section className="mb-16">
+          <div className="bg-white rounded-3xl p-8 border border-[#66D9EF]/20 shadow-xl">
+            <h2 className="text-3xl font-bold text-[#1A1A3A] mb-4 flex items-center">
+              <div className={`w-8 h-8 bg-gradient-to-r from-[#36C9C9] to-[#66D9EF] rounded-full flex items-center justify-center ${isAr ? 'ml-4' : 'mr-4'}`}>
+                <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+              </div>
+              {t("page.cloud.packages.title")}
+            </h2>
+            
+            <div className={`grid md:grid-cols-3 gap-8 ${isAr ? 'text-right' : 'text-left'}`}>
+              <div className="bg-gradient-to-br from-[#66D9EF] to-[#36C9C9] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+                <h3 className="text-2xl font-bold mb-4">{t('page.cloud.packages.starter.title')}</h3>
+                <ul className="text-white/90 mb-6 leading-relaxed list-disc list-inside">
+                  {(() => {
+                    const features = t('page.cloud.packages.starter.features', { returnObjects: true });
+                    if (Array.isArray(features)) {
+                      return features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ));
+                    } else if (typeof features === 'string' && features !== 'page.cloud.packages.starter.features') {
+                      return <li>{features}</li>;
+                    } else {
+                      return <li>No features available</li>;
+                    }
+                  })()}
+                </ul>
+                <div className="text-3xl font-bold mb-6">{t('page.cloud.packages.starter.price')}</div>
+                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  {t('page.cloud.packages.getStarted')}
+                </button>
+              </div>
+              <div className="bg-gradient-to-br from-[#36C9C9] to-[#178de1] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+                <h3 className="text-2xl font-bold mb-4">{t('page.cloud.packages.scalable.title')}</h3>
+                <ul className="text-white/90 mb-6 leading-relaxed list-disc list-inside">
+                  {(() => {
+                    const features = t('page.cloud.packages.scalable.features', { returnObjects: true });
+                    if (Array.isArray(features)) {
+                      return features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ));
+                    } else if (typeof features === 'string' && features !== 'page.cloud.packages.scalable.features') {
+                      return <li>{features}</li>;
+                    } else {
+                      return <li>No features available</li>;
+                    }
+                  })()}
+                </ul>
+                <div className="text-3xl font-bold mb-6">{t('page.cloud.packages.scalable.price')}</div>
+                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  {t('page.cloud.packages.getStarted')}
+                </button>
+              </div>
+              <div className="bg-gradient-to-br from-[#178de1] to-[#66D9EF] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+                <h3 className="text-2xl font-bold mb-4">{t('page.cloud.packages.enterprise.title')}</h3>
+                <ul className="text-white/90 mb-6 leading-relaxed list-disc list-inside">
+                  {(() => {
+                    const features = t('page.cloud.packages.enterprise.features', { returnObjects: true });
+                    if (Array.isArray(features)) {
+                      return features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ));
+                    } else if (typeof features === 'string' && features !== 'page.cloud.packages.enterprise.features') {
+                      return <li>{features}</li>;
+                    } else {
+                      return <li>No features available</li>;
+                    }
+                  })()}
+                </ul>
+                <div className="text-3xl font-bold mb-6">{t('page.cloud.packages.enterprise.price')}</div>
+                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  {t('page.cloud.packages.getStarted')}
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-gradient-to-r from-[#178de1] via-[#36C9C9] to-[#178de1] text-white rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden shadow-2xl">
           {/* Animated background elements */}
           <div className="absolute inset-0 opacity-20">
