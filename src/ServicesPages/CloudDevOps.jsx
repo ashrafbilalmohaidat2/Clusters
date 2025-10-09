@@ -299,5 +299,4 @@ const CloudDevOps = () => {
     </div>
   );
 };
-
 export default CloudDevOps;

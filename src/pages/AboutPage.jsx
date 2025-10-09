@@ -51,7 +51,6 @@ const AboutPage = () => {
             </p>
           </div>
         </section>
-
         {/* Team Section 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-8 text-center">{t("meetTeam")}</h2>
@@ -61,7 +60,6 @@ const AboutPage = () => {
             ))}
           </div>
         </section> */}
-
         {/* Values Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-[#3C3C3C] mb-8 text-center">{t("coreValues")}</h2>
