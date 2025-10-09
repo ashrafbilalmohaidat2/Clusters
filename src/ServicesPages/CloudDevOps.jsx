@@ -220,9 +220,9 @@ const CloudDevOps = () => {
                   })()}
                 </ul>
                 <div className="text-3xl font-bold mb-6">{t('page.cloud.packages.starter.price')}</div>
-                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                <a href="/contact" className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block text-center">
                   {t('page.cloud.packages.getStarted')}
-                </button>
+                </a>
               </div>
               <div className="bg-gradient-to-br from-[#36C9C9] to-[#178de1] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
                 <h3 className="text-2xl font-bold mb-4">{t('page.cloud.packages.scalable.title')}</h3>
@@ -241,9 +241,9 @@ const CloudDevOps = () => {
                   })()}
                 </ul>
                 <div className="text-3xl font-bold mb-6">{t('page.cloud.packages.scalable.price')}</div>
-                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                <a href="/contact" className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block text-center">
                   {t('page.cloud.packages.getStarted')}
-                </button>
+                </a>
               </div>
               <div className="bg-gradient-to-br from-[#178de1] to-[#66D9EF] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
                 <h3 className="text-2xl font-bold mb-4">{t('page.cloud.packages.enterprise.title')}</h3>
@@ -262,9 +262,9 @@ const CloudDevOps = () => {
                   })()}
                 </ul>
                 <div className="text-3xl font-bold mb-6">{t('page.cloud.packages.enterprise.price')}</div>
-                <button className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                <a href="/contact" className="w-full cursor-pointer bg-white text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block text-center">
                   {t('page.cloud.packages.getStarted')}
-                </button>
+                </a>
               </div>
             </div>
           </div>
