@@ -20,7 +20,7 @@ const AboutPage = () => {
   const alternates = { "x-default": "/about", en: "/about", ar: "/about" };
   const partnerships = [
     { icon: <img src={partner} alt="partner" className="w-15 h-15 mx-auto" />, title: t("Partnerships"), description: t("aboutpartnership.partnershipsDesc") },
-    { icon: <img src={certificate} alt="Certificate" className="w-15 h-15 mx-auto" />, title: t("AWS Certified"), description: t("aboutpartnership.awsDesc") },
+    { icon: <img src={certificate} alt="Certificate" className="w-15 h-15 mx-auto" />, title: t("AWS & Alibaba Cloud Certified"), description: t("aboutpartnership.awsDesc") },
   ];
 
   const coreValues = [
