@@ -197,7 +197,7 @@
             "SEO optimization",
             "Post-delivery support"
           ],
-          "price": "$400–$700"
+          "price": "$300–$600"
         },
         "professional": {
           "title": "Professional",
@@ -208,7 +208,7 @@
             "Marketing tool integrations",
             "1-month support"
           ],
-          "price": "$1000–$2000"
+          "price": "$600–$1500"
         },
         "advanced": {
           "title": "Advanced",
@@ -219,7 +219,7 @@
             "Admin training",
             "3-month maintenance"
           ],
-          "price": "$2500–$6000"
+          "price": "$1500–$5000"
         }
       },
       "cta": {
@@ -295,7 +295,7 @@
             "User optimization",
             "Post-delivery report"
           ],
-          "price": "$300–$600"
+          "price": "$300–$500"
         },
         "professional": {
           "title": "Professional",
@@ -306,7 +306,7 @@
             "Brand integration",
             "1-month support"
           ],
-          "price": "$800–$1500"
+          "price": "$500–$1000"
         },
         "advanced": {
           "title": "Advanced",
@@ -317,7 +317,7 @@
             "Design training",
             "3-month maintenance"
           ],
-          "price": "$2000–$5000"
+          "price": "$1000–$4000"
         },
         "getStarted": "Get Started"
       },
@@ -395,7 +395,7 @@
             "cost optimization",
             "post-launch report"
           ],
-          "price": "$600–$1200"
+          "price": "$500–$1000"
         },
         "scalable": {
           "title": "Scalable",
@@ -406,7 +406,7 @@
             "alerts",
             "2-month support"
           ],
-          "price": "$2000–$4000"
+          "price": "$1000–$3000"
         },
         "enterprise": {
           "title": "Enterprise",
@@ -417,7 +417,7 @@
             "continuity",
             "3-month support"
           ],
-          "price": "$5000–$9000"
+          "price": "$3000–$8000"
         },
         "getStarted": "Get Started"
       },
