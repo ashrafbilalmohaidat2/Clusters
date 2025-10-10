@@ -190,7 +190,7 @@ const UIUXDesign = () => {
               {t("page.uiux.packages.title")}
             </h2>
 
-            <div className={`grid md:grid-cols-3 gap-8 ${isAr ? 'text-right' : 'text-left'}`}>
+            <div className={`grid py-5 md:grid-cols-3 gap-8 ${isAr ? 'text-right' : 'text-left'}`}>
               <div className="bg-gradient-to-br from-[#66D9EF] to-[#36C9C9] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
                 <h3 className="text-2xl font-bold mb-4">{t('page.uiux.packages.basic.title')}</h3>
                 <ul className="list-disc list-inside mb-6 leading-relaxed text-white/90">
