@@ -182,7 +182,7 @@ const UIUXDesign = () => {
 
         {/* Packages */}
         <section className="mb-16">
-          <div className="bg-white rounded-4xl p-10 border border-[#66D9EF]/20 shadow-2xl">
+          <div className="bg-white rounded-4xl p-2 border border-[#66D9EF]/20 shadow-2xl">
             <h2 className="text-3xl font-extrabold text-[#1A1A3A] mb-6 flex items-center">
               <div className={`w-10 h-10 bg-gradient-to-r from-[#36C9C9] to-[#66D9EF] rounded-full flex items-center justify-center ${isAr ? 'ml-4' : 'mr-4'}`}>
                 <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
