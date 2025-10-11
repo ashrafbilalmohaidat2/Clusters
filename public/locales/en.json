@@ -188,36 +188,37 @@
       },
       "packages": {
         "title": "Web Development Packages",
+        "note": "Prices are indicative and may vary based on project requirements.",
         "basic": {
           "title": "Basic",
           "features": [
             "Simple website (3–5 pages)",
-            "Responsive design",
-            "Contact form",
-            "SEO optimization",
-            "Post-delivery support"
+            "Responsive design for all devices",
+            "Basic contact form integration",
+            "Basic SEO setup",
+            "Post-delivery support for bug fixes"
           ],
           "price": "$300–$600"
         },
         "professional": {
-          "title": "Professional",
+          "title": "Standard",
           "features": [
-            "Fully custom design",
-            "Easy admin panel",
-            "Enhanced UX",
-            "Marketing tool integrations",
-            "1-month support"
+            "Custom website design aligned with branding",
+            "CMS integration for easy content updates",
+            "Enhanced UX for better user experience",
+            "5–10 pages with multiple layouts",
+            "1-month post-launch support"
           ],
           "price": "$600–$1500"
         },
         "advanced": {
-          "title": "Advanced",
+          "title": "Premium",
           "features": [
-            "Interactive site or e-commerce",
-            "User login and payment system",
-            "Stable performance",
-            "Admin training",
-            "3-month maintenance"
+            "Interactive website or simple e-commerce",
+            "User login system if needed",
+            "Optimized performance and fast loading",
+            "Unlimited pages with advanced design",
+            "3-month post-launch support and maintenance"
           ],
           "price": "$1500–$5000"
         }
@@ -286,39 +287,40 @@
         ]
       },
       "packages": {
-        "title": "UI/UX Design Packages",
-        "basic": {
-          "title": "Basic",
-          "features": [
-            "Wireframes and basic design",
-            "Simple prototypes",
-            "User optimization",
-            "Post-delivery report"
-          ],
-          "price": "$300–$500"
-        },
-        "professional": {
-          "title": "Professional",
-          "features": [
-            "Full UI design",
-            "Interactive prototypes",
-            "Usability testing",
-            "Brand integration",
-            "1-month support"
-          ],
-          "price": "$500–$1000"
-        },
-        "advanced": {
-          "title": "Advanced",
-          "features": [
-            "Complete design system",
-            "Responsive design",
-            "Comprehensive testing",
-            "Design training",
-            "3-month maintenance"
-          ],
-          "price": "$1000–$4000"
-        },
+    "title": "UI/UX Design Packages",
+    "note": "Prices are indicative and may vary based on project requirements.",
+    "basic": {
+      "title": "Basic",
+      "features": [
+        "Wireframes and basic UI design",
+        "Simple interactive prototypes",
+        "Basic user experience optimization",
+        "Post-delivery design report"
+      ],
+      "price": "$300–$500"
+    },
+    "professional": {
+      "title": "Professional",
+      "features": [
+        "Full user interface design",
+        "Interactive high-fidelity prototypes",
+        "Usability testing and feedback",
+        "Brand and style integration",
+        "1-month post-delivery support"
+      ],
+      "price": "$500–$1000"
+    },
+    "advanced": {
+      "title": "Advanced",
+      "features": [
+        "Complete design system",
+        "Fully responsive design for all devices",
+        "Comprehensive testing and iteration",
+        "Design handoff and documentation",
+        "3-month maintenance and support"
+      ],
+      "price": "$1000–$4000"
+    },
         "getStarted": "Get Started"
       },
       "cta": {
@@ -386,39 +388,40 @@
         ]
       },
       "packages": {
-        "title": "Cloud & DevOps Packages",
-        "starter": {
-          "title": "Starter",
-          "features": [
-            "Secure cloud setup",
-            "resource management",
-            "cost optimization",
-            "post-launch report"
-          ],
-          "price": "$500–$1000"
-        },
-        "scalable": {
-          "title": "Scalable",
-          "features": [
-            "Flexible architecture",
-            "safe deployment",
-            "performance monitoring",
-            "alerts",
-            "2-month support"
-          ],
-          "price": "$1000–$3000"
-        },
-        "enterprise": {
-          "title": "Enterprise",
-          "features": [
-            "Full architecture",
-            "high security",
-            "load balancing",
-            "continuity",
-            "3-month support"
-          ],
-          "price": "$3000–$8000"
-        },
+    "title": "Cloud & DevOps Packages",
+    "note": "Prices are indicative and may vary based on project requirements.",
+    "starter": {
+      "title": "Starter",
+      "features": [
+        "Basic cloud setup",
+        "Resource management",
+        "Cost optimization",
+        "Post-launch report"
+      ],
+      "price": "$300–$700"
+    },
+    "scalable": {
+      "title": "Scalable",
+      "features": [
+        "Flexible infrastructure architecture",
+        "Safe application deployment",
+        "Performance monitoring",
+        "Alerts and notifications",
+        "2-month post-launch support"
+      ],
+      "price": "$700–$2000"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "features": [
+        "Full cloud infrastructure setup",
+        "High security and compliance",
+        "Load balancing and scalability",
+        "Disaster recovery and continuity",
+        "3-month support and maintenance"
+      ],
+      "price": "$2000–$5000"
+    },
         "getStarted": "Get Started"
       },
       "cta": {
