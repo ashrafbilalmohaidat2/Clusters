@@ -181,7 +181,7 @@ const WebDevelopment = () => {
 
         {/* Packages */}
         <section className="mb-16">
-            <div className="bg-white rounded-4xl p-2 border border-[#66D9EF]/20 shadow-2xl">
+            <div className="bg-white rounded-4xl p-5 border border-[#66D9EF]/20 shadow-2xl">
               <h2 className="text-3xl font-extrabold text-[#1A1A3A] mb-6 flex items-center">
                 <div className={`w-10 h-10 bg-gradient-to-r from-[#36C9C9] to-[#66D9EF] rounded-full flex items-center justify-center ${isAr ? 'ml-4' : 'mr-4'}`}>
                   <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
@@ -228,7 +228,7 @@ const WebDevelopment = () => {
               </div>
             </div>
           </section>
-          
+
         <section className="bg-gradient-to-r from-[#178de1] via-[#36C9C9] to-[#178de1] text-white rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden shadow-2xl">
           {/* Animated background elements */}
           <div className="absolute inset-0 opacity-20">
