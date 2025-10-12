@@ -205,15 +205,21 @@ const WebDevelopment = () => {
 
                     <h3 className="text-2xl font-extrabold mb-5 relative z-10">{t(`page.webDev.packages.${pkg}.title`)}</h3>
                     
-                    <ul className="text-white/90 mb-6 leading-relaxed list-disc list-inside space-y-3 relative z-10">
+                    <ul className="text-white/90 mb-6 leading-relaxed space-y-3 relative z-10">
                       {t(`page.webDev.packages.${pkg}.features`, { returnObjects: true }).map((feature, index) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <span className="w-2 h-2 bg-white rounded-full animate-ping-slow inline-block"></span>
+                        <li
+                          key={index}
+                          className={`relative pl-6 ${isAr ? 'pl-0 pr-6' : ''}`}
+                        >
+                          <span
+                            className={`absolute top-2.5 ${isAr ? 'right-0' : 'left-0'} w-2.5 h-2.5 bg-white rounded-full animate-ping-slow`}
+                          ></span>
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    
+
+
                     <div className="text-3xl font-extrabold mb-6 relative z-10">{t(`page.webDev.packages.${pkg}.price`)}</div>
                     
                     <a

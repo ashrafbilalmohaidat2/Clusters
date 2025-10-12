@@ -217,23 +217,28 @@ const CloudDevOps = () => {
 
                     <h3 className="text-2xl font-extrabold mb-5 relative z-10">{t(`page.cloud.packages.${pkg}.title`)}</h3>
                     
-                    <ul className="text-white/90 mb-6 leading-relaxed list-disc list-inside space-y-3 relative z-10">
-                      {(() => {
-                        const features = t(`page.cloud.packages.${pkg}.features`, { returnObjects: true });
-                        if (Array.isArray(features)) {
-                          return features.map((feature, index) => (
-                            <li key={index} className="flex items-center gap-2">
-                              <span className="w-2 h-2 bg-white rounded-full animate-ping-slow inline-block"></span>
-                              {feature}
-                            </li>
-                          ));
-                        } else if (typeof features === 'string' && features !== `page.cloud.packages.${pkg}.features`) {
-                          return <li>{features}</li>;
-                        } else {
-                          return <li>No features available</li>;
-                        }
-                      })()}
-                    </ul>
+                    <ul className="text-white/90 mb-6 leading-relaxed space-y-3 relative z-10">
+                        {(() => {
+                          const features = t(`page.cloud.packages.${pkg}.features`, { returnObjects: true });
+                          if (Array.isArray(features)) {
+                            return features.map((feature, index) => (
+                              <li
+                                key={index}
+                                className={`relative pl-6 ${isAr ? 'pl-0 pr-6' : ''}`}
+                              >
+                                <span
+                                  className={`absolute top-2.5 ${isAr ? 'right-0' : 'left-0'} w-2.5 h-2.5 bg-white rounded-full animate-ping-slow`}
+                                ></span>
+                                {feature}
+                              </li>
+                            ));
+                          } else if (typeof features === 'string' && features !== `page.cloud.packages.${pkg}.features`) {
+                            return <li>{features}</li>;
+                          } else {
+                            return <li>No features available</li>;
+                          }
+                        })()}
+                      </ul>
                     
                     <div className="text-3xl font-extrabold mb-6 relative z-10">{t(`page.cloud.packages.${pkg}.price`)}</div>
                     

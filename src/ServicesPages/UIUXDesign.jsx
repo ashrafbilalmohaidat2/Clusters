@@ -205,17 +205,27 @@ const UIUXDesign = () => {
 
                   <h3 className="text-2xl font-extrabold mb-5 relative z-10">{t(`page.uiux.packages.${pkg}.title`)}</h3>
                   
-                  <ul className="text-white/90 mb-6 leading-relaxed list-disc list-inside space-y-3 relative z-10">
-                    {(Array.isArray(t(`page.uiux.packages.${pkg}.features`, { returnObjects: true })) 
-                      ? t(`page.uiux.packages.${pkg}.features`, { returnObjects: true }) 
-                      : []
-                    ).map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-white rounded-full animate-ping-slow inline-block"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <ul className="text-white/90 mb-6 leading-relaxed space-y-3 relative z-10">
+                      {(() => {
+                        const features = t(`page.uiux.packages.${pkg}.features`, { returnObjects: true });
+                        if (Array.isArray(features)) {
+                          return features.map((feature, idx) => (
+                            <li
+                              key={idx}
+                              className={`relative pl-6 ${isAr ? 'pl-0 pr-6' : ''}`}
+                            >
+                              <span
+                                className={`absolute top-2.5 ${isAr ? 'right-0' : 'left-0'} w-2.5 h-2.5 bg-white rounded-full animate-ping-slow`}
+                              ></span>
+                              {feature}
+                            </li>
+                          ));
+                        } else {
+                          return <li>No features available</li>;
+                        }
+                      })()}
+                    </ul>
+
                   
                   <div className="text-3xl font-extrabold mb-6 relative z-10">{t(`page.uiux.packages.${pkg}.price`)}</div>
                   
