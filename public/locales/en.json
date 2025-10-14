@@ -338,7 +338,7 @@
         "features": [
           "Cloud migration and modernization",
           "Infrastructure as Code implementation",
-          "Container orchestration with Kubernetes",
+          "Container orchestration",
           "CI/CD pipeline automation",
           "Cloud security and compliance",
           "Cost optimization and monitoring"

@@ -14,6 +14,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
+        preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src="heroSection.mp4" type="video/mp4" />
@@ -54,7 +55,7 @@ const HeroSection = () => {
           <div className="flex justify-center md:justify-end mt-8 md:mt-0">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 max-w-full">
               <img
-                src="clusterslogo.png"
+                src="clustersLogoimg.png"
                 alt={(t("heroTitle") || "Clusters") + " hero visual"}
                 className="rounded-lg w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain"
               />

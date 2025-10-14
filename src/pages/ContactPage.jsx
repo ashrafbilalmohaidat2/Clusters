@@ -1,42 +1,12 @@
 // pages/ContactPage.js
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import SEO from "../components/SEO";
 import ContactForm from "../components/forms/ContactForm";
 import ContactInfo from "../components/ContactInfo";
 
 const ContactPage = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    service: "",
-  });
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-      service: "",
-    });
-    
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 3000);
-  };
-
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // Removed unused local form state and handlers; ContactForm is self-contained
 
   const { t } = useTranslation();
   const title = t("seo.contact.title");
@@ -55,13 +25,7 @@ const ContactPage = () => {
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
-          <ContactForm 
-            formSubmitted={formSubmitted}
-            formData={formData}
-            handleFormSubmit={handleFormSubmit}
-            handleInputChange={handleInputChange}
-            setFormSubmitted={setFormSubmitted}
-          />
+          <ContactForm />
           <ContactInfo />
         </div>
       </div>

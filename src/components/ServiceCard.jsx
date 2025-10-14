@@ -1,28 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { getServicePath } from "../utils/getServicePath";
 
 const ServiceCard = ({ service, showDetails = false }) => {
   const { i18n, t } = useTranslation();
   const isAr = i18n.language === "ar";
 
-  const getServiceLink = () => {
-    const lower = (service.title || "").toLowerCase();
-    if (isAr) {
-      if (lower.includes("cloud") || lower.includes("devops"))
-        return "/خدمات-هندسة-السحابة-ودفوبس";
-      if (lower.includes("ui") || lower.includes("ux"))
-        return "/خدمات-تصميم-واجهات-وتجربة-المستخدم";
-      if (lower.includes("web")) return "/خدمات-تطوير-الويب";
-    } else {
-      if (lower.includes("cloud") || lower.includes("devops"))
-        return "/cloud-devops-services";
-      if (lower.includes("ui") || lower.includes("ux"))
-        return "/ui-ux-design-services";
-      if (lower.includes("web")) return "/web-development-services";
-    }
-    return "/services";
-  };
+  const getServiceLink = () => getServicePath(service.title, isAr);
 
   // 🧩 Full Detailed Card
   if (showDetails) {

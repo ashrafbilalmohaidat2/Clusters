@@ -1,19 +1,21 @@
 // App.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import ServicesPage from "./pages/ServicesPage";
-import WebDevelopment from "./ServicesPages/WebDevelopment";
-import UIUXDesign from "./ServicesPages/UIUXDesign";
-import CloudDevOps from "./ServicesPages/CloudDevOps";
-import PortfolioPage from "./pages/PortfolioPage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import BlogPage from "./pages/BlogPage";
 import ScrollToTop from "./components/ScrollToTop";
+import ClusterLoader from "./components/ClusterLoader";
+
+// Lazy-load route components for code-splitting and faster initial loads
+const HomePage = lazy(() => import("./pages/HomePage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const WebDevelopment = lazy(() => import("./ServicesPages/WebDevelopment"));
+const UIUXDesign = lazy(() => import("./ServicesPages/UIUXDesign"));
+const CloudDevOps = lazy(() => import("./ServicesPages/CloudDevOps"));
+const PortfolioPage = lazy(() => import("./pages/PortfolioPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,11 +28,13 @@ const App = () => {
   }, [i18n.language]);
 
   return (
-    <div className="min-h-screen bg-white" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
+    <div className="min-h-screen bg-white">
+      {/* document.dir/lang are managed globally via i18n effect for RTL/LTR */}
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main>
         <ScrollToTop />
-        <Routes>
+        <Suspense fallback={<ClusterLoader />}>
+          <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
@@ -43,6 +47,7 @@ const App = () => {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        </Suspense>
       </main>
       <Footer />
     </div>

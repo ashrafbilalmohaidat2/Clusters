@@ -6,9 +6,10 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.scrollTo) {
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({
         top: 0,
-        behavior: "smooth", // يخليها تنزل بسلاسة
+        behavior: prefersReduced ? "auto" : "smooth",
       });
     }
   }, [pathname]);

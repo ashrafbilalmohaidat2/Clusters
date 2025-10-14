@@ -180,7 +180,8 @@ const UIUXDesign = () => {
           </div>
         </section>
 
-        {/* Packages */}
+        {/* 
+        Packages
         <section className="mb-16">
           <div className="bg-white rounded-4xl p-5 border border-[#66D9EF]/20 shadow-2xl">
             <h2 className="text-3xl font-extrabold text-[#1A1A3A] mb-6 flex items-center">
@@ -199,7 +200,6 @@ const UIUXDesign = () => {
                     ${pkg === 'basic' ? 'bg-gradient-to-br from-[#66D9EF] to-[#36C9C9]' : pkg === 'professional' ? 'bg-gradient-to-br from-[#36C9C9] to-[#178de1]' : 'bg-gradient-to-br from-[#178de1] to-[#66D9EF]'}
                   `}
                 >
-                  {/* Overlay shapes */}
                   <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full -translate-x-12 -translate-y-12 animate-pulse-slow pointer-events-none"></div>
                   <div className="absolute bottom-0 right-0 w-40 h-40 bg-white/5 rounded-full translate-x-16 translate-y-16 pointer-events-none"></div>
 
@@ -240,7 +240,8 @@ const UIUXDesign = () => {
 
             </div>
           </div>
-        </section>
+        </section> 
+        */}
 
         <section className="bg-gradient-to-r from-[#178de1] via-[#36C9C9] to-[#178de1] text-white rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden shadow-2xl">
           {/* Animated background elements */}

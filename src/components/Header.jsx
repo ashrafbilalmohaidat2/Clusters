@@ -1,5 +1,5 @@
 // components/Header.js
-import React from "react";
+import React, { useMemo, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -8,22 +8,61 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
   const location = useLocation();
   const { t, i18n } = useTranslation();
 
-  const navItems = [
+  // Memoize nav items so they're only recalculated when translations update
+  const navItems = useMemo(() => ([
     { name: t("home"), path: "/" },
     { name: t("about"), path: "/about" },
     { name: t("services"), path: "/services" },
     { name: t("portfolio"), path: "/portfolio" },
     { name: t("contact"), path: "/contact" }
-  ];
+  ]), [t]);
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = useCallback((path) => location.pathname === path, [location.pathname]);
 
-
+  // Single handler for home link scroll behavior to avoid duplication
+  const handleHomeClick = useCallback((e, path) => {
+    if (path === "/" && location.pathname === "/") {
+      if (typeof window !== "undefined" && window.scrollTo) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  }, [location.pathname]);
 
   // Language switcher
-  const handleLanguageChange = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const handleLanguageChange = useCallback((lng) => {
+    if (i18n.language !== lng) i18n.changeLanguage(lng);
+  }, [i18n.language, i18n]);
+
+  // Reusable Language Switcher (desktop + mobile)
+  const LanguageSwitcher = ({ className = "" }) => (
+    <div className={`ms-6 flex gap-2 ${className}`}>
+      <button
+        type="button"
+        onClick={() => handleLanguageChange("en")}
+        aria-pressed={i18n.language === "en"}
+        className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all hover:cursor-pointer duration-200 focus:outline-none border-2
+          ${i18n.language === "en"
+            ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
+            : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}`}
+        style={{ minWidth: 48 }}
+      >
+        EN
+      </button>
+      <button
+        type="button"
+        onClick={() => handleLanguageChange("ar")}
+        aria-pressed={i18n.language === "ar"}
+        className={`px-3 py-1.5 rounded-full text-sm font-bold hover:cursor-pointer shadow transition-all duration-200 focus:outline-none border-2
+          ${i18n.language === "ar"
+            ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
+            : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}`}
+        style={{ minWidth: 48 }}
+      >
+        العربية
+      </button>
+    </div>
+  );
 
   return (
   <nav className="bg-white shadow-md sticky py-4 top-0 z-50 border-b border-gray-300">
@@ -32,17 +71,11 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
           <div className="flex items-center">
             <Link
               to="/"
+              aria-label={t("home")}
               className="w-20 h-20"
-              onClick={(e) => {
-                if (location.pathname === "/") {
-                  if (typeof window !== "undefined" && window.scrollTo) {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }
-                }
-              }}
+              onClick={(e) => handleHomeClick(e, "/")}
             >
-              <img src="logoClusters.png" alt="Clusters company logo" />
+              <img src="noPgLogo.png" alt="Clusters company logo" />
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -52,14 +85,8 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  onClick={(e) => {
-                    if (item.path === "/" && location.pathname === "/") {
-                      if (typeof window !== "undefined" && window.scrollTo) {
-                        e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }
-                    }
-                  }}
+                  aria-current={isActive(item.path) ? "page" : undefined}
+                  onClick={(e) => handleHomeClick(e, item.path)}
                   className={`px-3 py-2 rounded-md text-md font-bold transition-colors duration-200 ${
                     isActive(item.path)
                       ? "bg-[#F0F9FF] text-[#00AEEF]"
@@ -71,34 +98,14 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               ))}
             </div>
             {/* Language Switcher */}
-            <div className="ms-6 flex gap-2">
-              <button
-                onClick={() => handleLanguageChange("en")}
-                className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all hover:cursor-pointer duration-200 focus:outline-none border-2
-                  ${i18n.language === "en"
-                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
-                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
-                `}
-                style={{ minWidth: 48 }}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => handleLanguageChange("ar")}
-                className={`px-3 py-1.5 rounded-full text-sm font-bold hover:cursor-pointer shadow transition-all duration-200 focus:outline-none border-2
-                  ${i18n.language === "ar"
-                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
-                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
-                `}
-                style={{ minWidth: 48 }}
-              >
-                العربية
-              </button>
-            </div>
+            <LanguageSwitcher />
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
+              type="button"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-[#3C3C3C] hover:text-[#00AEEF] focus:outline-none"
             >
@@ -111,21 +118,14 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
       </div>
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-[#C5C9CC]">
+        <div id="mobile-menu" className="md:hidden bg-white border-t border-[#C5C9CC] mt-2" aria-hidden={!isMenuOpen}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                onClick={(e) => {
-                  if (item.path === "/" && location.pathname === "/") {
-                    if (typeof window !== "undefined" && window.scrollTo) {
-                      e.preventDefault();
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    }
-                  }
-                  setIsMenuOpen(false);
-                }}
+                aria-current={isActive(item.path) ? "page" : undefined}
+                onClick={(e) => { handleHomeClick(e, item.path); setIsMenuOpen(false); }}
                 className={`block px-3 py-2 rounded-md text-base font-bold w-full text-start transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-[#F0F9FF] text-[#00AEEF]"
@@ -136,30 +136,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               </Link>
             ))}
             {/* Language Switcher Mobile */}
-            <div className="flex gap-2 mt-2">
-              <button
-                onClick={() => handleLanguageChange("en")}
-                className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all duration-200 focus:outline-none border-2
-                  ${i18n.language === "en"
-                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
-                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
-                `}
-                style={{ minWidth: 48 }}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => handleLanguageChange("ar")}
-                className={`px-3 py-1.5 rounded-full text-sm font-bold shadow transition-all duration-200 focus:outline-none border-2
-                  ${i18n.language === "ar"
-                    ? "bg-gradient-to-r from-[#00AEEF] to-[#1E3A8A] text-white border-transparent scale-105 shadow-lg"
-                    : "bg-white text-[#00AEEF] border-[#00AEEF] hover:bg-[#F0F9FF] hover:scale-105"}
-                `}
-                style={{ minWidth: 48 }}
-              >
-                العربية
-              </button>
-            </div>
+            <LanguageSwitcher className="mt-2" />
           </div>
         </div>
       )}

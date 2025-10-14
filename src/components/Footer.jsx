@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { services } from "../data/mockData";
+import { getServicePath } from "../utils/getServicePath";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -44,7 +45,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="mb-4 block">
-              <img src="logoClusters.png" alt="Clusters company logo" className="w-20 h-20" />
+              <img src="noPgLogo.png" alt="Clusters company logo" className="w-20 h-20" />
             </Link>
             <p className="text-gray-300 mb-4 font-medium">
               {isAr ? t("footerDesc") : "Transforming businesses through innovative technology and creative design solutions."}
@@ -56,6 +57,7 @@ const Footer = () => {
                   href={social.url}
                   title={social.name}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {social.icon}
                 </a>
@@ -67,19 +69,7 @@ const Footer = () => {
             <ul className="space-y-2 font-medium">
               {services.slice(0, 4).map((service) => {
                 const title = isAr ? service.title_ar : service.title;
-                const lower = (service.title || "").toLowerCase();
-                const to = (() => {
-                  if (isAr) {
-                    if (lower.includes("cloud") || lower.includes("devops")) return "/خدمات-هندسة-السحابة-ودفوبس";
-                    if (lower.includes("ui") || lower.includes("ux")) return "/خدمات-تصميم-واجهات-وتجربة-المستخدم";
-                    if (lower.includes("web")) return "/خدمات-تطوير-الويب";
-                  } else {
-                    if (lower.includes("cloud") || lower.includes("devops")) return "/cloud-devops-services";
-                    if (lower.includes("ui") || lower.includes("ux")) return "/ui-ux-design-services";
-                    if (lower.includes("web")) return "/web-development-services";
-                  }
-                  return "/services";
-                })();
+                const to = getServicePath(service.title, isAr);
                 return (
                   <li key={service.id}>
                     <Link

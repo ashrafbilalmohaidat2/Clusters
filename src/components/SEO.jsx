@@ -109,4 +109,3 @@ const SEO = ({ title, description, keywords = [], jsonLd, canonicalPath, alterna
 
 export default SEO;
 
-
