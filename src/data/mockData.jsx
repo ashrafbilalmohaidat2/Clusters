@@ -43,7 +43,7 @@ export const services = [
     },
     {
       id: 3,
-      title: "Cloud & DevOps",
+      title: "Cloud Computing & DevOps",
       title_ar: "الحوسبة السحابية و DevOps",
       description: "We design and manage cloud infrastructures to ensure your applications are secure, highly available, and scalable to grow with your business.",
       description_ar: "نصمم وندير بنى تحتية سحابية لضمان أمان تطبيقاتك، جاهزيتها العالية، وقابليتها للتوسع مع نمو أعمالك.",
@@ -60,11 +60,11 @@ export const services = [
 export const portfolioProjects = [
     {
       id: 1,
-      title: "Two-Tier Architecture Infrastructure",
+      title: "Two-Tier Architecture Cloud Infrastructure",
       title_ar: "بنية تحتية ذات طبقتين",
       category: "Cloud & DevOps",
       category_ar: "الحوسبة السحابية و DevOps",
-      image: "https://placehold.co/600x400/00AEEF/FFFFFF?text=CloudDevOps",
+      image: "TwoTier.png",
       challenge: "The client needed a reliable and scalable cloud infrastructure to support their growing applications and ensure high availability.",
       solution: "Designed and deployed a two-tier architecture on AWS using Terraform for Infrastructure as Code (IaC). Automated the provisioning of VPC, subnets, EC2 instances, and RDS with proper security groups and load balancing.",
       technologies: ["AWS", "Terraform"],
@@ -79,10 +79,24 @@ export const portfolioProjects = [
       category_ar: "تطوير الويب (الواجهة الأمامية)",
       image: "https://placehold.co/600x400/00AEEF/FFFFFF?text=Spices+Food+Blog",
       challenge: "The client wanted a responsive and visually appealing food blog with optimized performance.",
-      solution: "Built a React.js application with lazy loading for components and images to enhance performance and ensure a smooth user experience across devices.",
+      solution: "Designed and deployed a two-tier architecture on AWS using Terraform for Infrastructure as Code (IaC). Automated the provisioning of VPC, subnets, EC2 instances, and RDS with proper security groups and load balancing.",
       technologies: ["React.js", "HTML5", "CSS3", "JavaScript"],
       results: "Improved page load speed by 40% and increased user engagement through an optimized browsing experience.",
       link: "https://spices-resturant-app-teal.vercel.app/"
+
+    },
+    {
+      id: 3,
+      title: "Three-Tier Architecture Cloud Infrastructure",
+      title_ar: "بنية تحتية ذات ثلاث طبقات",
+      category: "Cloud Computing & DevOps",
+      category_ar: "الحوسبة السحابية و DevOps",
+      image: "ThreeTier.png",
+      challenge: "The client needed a reliable and scalable cloud infrastructure to support their growing applications and ensure high availability.",
+      solution: "Built a React.js application with lazy loading for components and images to enhance performance and ensure a smooth user experience across devices.",
+      technologies: ["AWS", "Terraform","Cloud Security"],
+      results: "Improved page load speed by 40% and increased user engagement through an optimized browsing experience.",
+      link: "https://github.com/ashrafbilalmohaidat2/Multi-Tier-Architecture-on-AWS-Terraform-"
 
     }
   ];
