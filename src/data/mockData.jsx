@@ -69,7 +69,7 @@ export const portfolioProjects = [
       solution: "Designed and deployed a two-tier architecture on AWS using Terraform for Infrastructure as Code (IaC). Automated the provisioning of VPC, subnets, EC2 instances, and RDS with proper security groups and load balancing.",
       technologies: ["AWS", "Terraform"],
       results: "Reduced infrastructure setup time by 80%, improved system scalability and resilience, and ensured consistent and repeatable deployments.",
-      link: "https://github.com/ashrafbilalmohaidat2/Two-Tier-Architecture"
+      /*link: "https://github.com/ashrafbilalmohaidat2/Two-Tier-Architecture"*/
     },
     {
       id: 2,
@@ -96,7 +96,7 @@ export const portfolioProjects = [
       solution: "Built a React.js application with lazy loading for components and images to enhance performance and ensure a smooth user experience across devices.",
       technologies: ["AWS", "Terraform","Cloud Security"],
       results: "Improved page load speed by 40% and increased user engagement through an optimized browsing experience.",
-      link: "https://github.com/ashrafbilalmohaidat2/Multi-Tier-Architecture-on-AWS-Terraform-"
+     /* link: "https://github.com/ashrafbilalmohaidat2/Multi-Tier-Architecture-on-AWS-Terraform-"*/
 
     }
   ];
